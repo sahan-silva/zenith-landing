@@ -4,13 +4,13 @@
  * Reusable email capture form for Zenith Journal waitlist.
  * Quiet Confidence redesign: Ember accent button, clean input styling.
  *
- * Related: utils/convertkit.ts, Hero.tsx, FinalCTA.tsx
+ * Related: utils/waitlist.ts, Hero.tsx, FinalCTA.tsx
  */
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Loader2, CheckCircle, AlertCircle } from 'lucide-react';
-import { subscribeToWaitlist } from '../utils/convertkit';
+import { subscribeToWaitlist } from '../utils/waitlist';
 
 interface EmailFormProps {
   buttonText?: string;
