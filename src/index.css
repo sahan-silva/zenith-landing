@@ -1,0 +1,97 @@
+/**
+ * src/index.css
+ *
+ * Global styles for Zenith Journal landing page.
+ * Implements the Quiet Confidence design system.
+ *
+ * Related: tailwind.config.js, docs/ADR-001-quiet-confidence-visual-system.md
+ */
+
+/* Quiet Confidence Typography - Libre Baskerville (Display) + Source Sans 3 (Body) */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    /* Quiet Confidence tokens for potential future theming */
+    --qc-ink: #0a0a0b;
+    --qc-cream: #f5f2ed;
+    --qc-stone: #9a918a;
+    --qc-ember: #c97a4a;
+    --qc-dawn: #d4a574;
+  }
+
+  body {
+    background-color: #0a0a0b;
+    color: #f5f2ed;
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    @apply antialiased overflow-x-hidden;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background-color: #c97a4a;
+    color: #0a0a0b;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    @apply tracking-tight font-bold;
+  }
+}
+
+@layer utilities {
+  /* Quiet Confidence Utility Classes */
+
+  /* Base container for Quiet Confidence sections */
+  .qc-section {
+    @apply bg-ink text-cream;
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+  }
+
+  /* Quiet Confidence Headings - Serif display font */
+  .qc-heading {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    @apply text-cream tracking-tight;
+  }
+
+  /* Secondary text in warm stone */
+  .qc-secondary {
+    @apply text-stone;
+  }
+
+  /* Ember accent for CTAs and key highlights */
+  .qc-accent {
+    @apply text-ember;
+  }
+
+  /* Subtle ember glow for buttons */
+  .qc-button {
+    @apply bg-ember text-ink font-medium rounded-md px-6 py-3;
+    @apply transition-all duration-500 ease-out;
+    @apply hover:bg-dawn hover:shadow-ember-glow;
+  }
+
+  /* Quiet Confidence transition - single 0.5s ease-out */
+  .qc-transition {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
