@@ -10,6 +10,7 @@ A standalone landing page for Zenith Journal - private AI-powered journaling for
 - **Tailwind CSS v4** - Styling with Quiet Confidence design system
 - **Framer Motion** - Animations
 - **Lucide React** - Icons
+- **Supabase** - Database for email waitlist capture
 
 ## Design System
 
@@ -63,16 +64,39 @@ Copy `.env.example` to `.env.local` and configure:
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `VITE_CONVERTKIT_FORM_ID` | Yes (for prod) | ConvertKit form ID for email waitlist |
+| `VITE_SUPABASE_URL` | Yes (for prod) | Supabase project URL |
+| `VITE_SUPABASE_ANON_KEY` | Yes (for prod) | Supabase anonymous key |
 
-In development mode, the email form will simulate success if the form ID is not set.
+In development mode, the email form will simulate success if credentials are not set.
+
+### Supabase Setup
+
+1. Create a `waitlist_signups` table in your Supabase project:
+
+```sql
+CREATE TABLE IF NOT EXISTS waitlist_signups (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  email TEXT NOT NULL UNIQUE,
+  source TEXT NOT NULL DEFAULT 'zenith-landing',
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+ALTER TABLE waitlist_signups ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow anonymous insert" ON waitlist_signups
+  FOR INSERT TO anon WITH CHECK (true);
+```
+
+2. Get your credentials from **Project Settings > API**
 
 ## Deployment
 
 This project is configured for Vercel deployment:
 
 1. Connect your GitHub repository to Vercel
-2. Set environment variable `VITE_CONVERTKIT_FORM_ID` in Vercel dashboard
+2. Set environment variables in Vercel dashboard:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
 3. Deploy
 
 The `vercel.json` configuration is included for optimal settings.
@@ -95,7 +119,8 @@ zenith-landing/
 │   │   ├── ZenithFooter.tsx
 │   │   └── ZenithLanding.tsx
 │   ├── utils/
-│   │   └── convertkit.ts
+│   │   ├── supabaseClient.ts
+│   │   └── waitlist.ts
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── index.css
