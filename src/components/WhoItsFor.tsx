@@ -12,10 +12,10 @@ import { motion } from 'framer-motion';
 
 const WhoItsFor: React.FC = () => {
   const checklistItems = [
-    'You coach others but struggle to coach yourself',
-    "You believe in the power of reflection but don't make time for it",
-    "You're privacy-conscious and tired of apps that monetize your data",
-    'You want an AI partner, not an AI overlord',
+    'You have thoughts worth remembering—but they slip away',
+    'You sense patterns in your life but struggle to name them',
+    "You're tired of productivity apps that don't understand purpose",
+    'You want clarity about who you are and where you\'re going',
   ];
 
   // Single fade-in animation (Quiet Confidence constraint)
@@ -38,8 +38,7 @@ const WhoItsFor: React.FC = () => {
             Is this <span className="text-ember">you</span>?
           </h2>
           <p className="text-stone text-lg font-body">
-            Zenith is built for people who understand transformation starts
-            within.
+            Zenith is for anyone seeking meaning, not just metrics.
           </p>
         </motion.div>
 
@@ -68,8 +67,7 @@ const WhoItsFor: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-16 font-body"
         >
-          If you nodded along to any of these, you're exactly who we built
-          Zenith for.
+          If any of these resonate, Zenith was built with you in mind.
         </motion.p>
       </div>
     </section>

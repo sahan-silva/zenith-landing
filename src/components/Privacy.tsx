@@ -46,15 +46,15 @@ const Privacy: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-stone">
                 <span className="text-stone/40 mt-1">-</span>
-                <span>Send your most private thoughts to remote servers</span>
+                <span>Your data trains their AI models</span>
               </li>
               <li className="flex items-start gap-3 text-stone">
                 <span className="text-stone/40 mt-1">-</span>
-                <span>Your data used to train AI models</span>
+                <span>Sold to advertisers, analyzed for profit</span>
               </li>
               <li className="flex items-start gap-3 text-stone">
                 <span className="text-stone/40 mt-1">-</span>
-                <span>No internet? No access to your own journal.</span>
+                <span>You're the product, not the customer</span>
               </li>
             </ul>
           </motion.div>
@@ -72,19 +72,19 @@ const Privacy: React.FC = () => {
               <li className="flex items-start gap-3 text-cream">
                 <span className="text-ember mt-1">+</span>
                 <span>
-                  Runs <strong>entirely on your device</strong>
+                  <strong>Your journals are never sold or shared</strong>
                 </span>
               </li>
               <li className="flex items-start gap-3 text-cream">
                 <span className="text-ember mt-1">+</span>
                 <span>
-                  Your words <strong>never leave your computer</strong>
+                  <strong>We don't train AI on your words</strong>
                 </span>
               </li>
               <li className="flex items-start gap-3 text-cream">
                 <span className="text-ember mt-1">+</span>
                 <span>
-                  Works offline. <strong>Your data, your control.</strong>
+                  <strong>You are the customer, not the product</strong>
                 </span>
               </li>
             </ul>
@@ -99,7 +99,7 @@ const Privacy: React.FC = () => {
           className="text-center border-t border-stone/20 pt-12"
         >
           <p className="font-display text-2xl sm:text-3xl font-medium text-cream tracking-tight">
-            Your journal is <span className="text-ember">yours</span>. Period.
+            Your story is <span className="text-ember">sacred</span>. We treat it that way.
           </p>
         </motion.div>
       </div>

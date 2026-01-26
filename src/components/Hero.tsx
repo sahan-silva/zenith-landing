@@ -38,7 +38,9 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.1 }}
           className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-cream mb-8 leading-tight tracking-tight"
         >
-          Your thoughts deserve more than a blank page.
+          Your life has a story.
+          <br />
+          <span className="text-ember">Zenith helps you see it.</span>
         </motion.h1>
 
         {/* Subhead - Body font, warm stone color */}
@@ -47,7 +49,7 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.2 }}
           className="text-lg sm:text-xl text-stone mb-12 max-w-2xl mx-auto leading-relaxed font-body"
         >
-          Finally understand why you keep feeling stuck—so you can do something about it.
+          Just talk. Zenith listens, remembers, and surfaces the goals, patterns, and moments that matter—so you can finally connect the dots.
         </motion.p>
 
         {/* Email Form */}
@@ -65,11 +67,11 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.4 }}
           className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-stone text-sm"
         >
+          <span>Voice-First Capture</span>
+          <span className="hidden sm:inline text-stone/30">|</span>
+          <span>AI That Remembers You</span>
+          <span className="hidden sm:inline text-stone/30">|</span>
           <span>100% Private</span>
-          <span className="hidden sm:inline text-stone/30">|</span>
-          <span>No Cloud Required</span>
-          <span className="hidden sm:inline text-stone/30">|</span>
-          <span>AI-Powered Insights</span>
         </motion.div>
       </div>
     </section>

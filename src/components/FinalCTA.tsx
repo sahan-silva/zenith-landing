@@ -13,10 +13,10 @@ import EmailForm from './EmailForm';
 
 const FinalCTA: React.FC = () => {
   const incentives = [
-    '50% off your first year',
-    'Direct input on features',
-    'Your name in the credits',
-    'Founding member badge',
+    'Early access to the beta',
+    'Shape the features we build',
+    'Founding member pricing',
+    'Start building your story first',
   ];
 
   // Single fade-in animation (Quiet Confidence constraint)
@@ -36,11 +36,10 @@ const FinalCTA: React.FC = () => {
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
-            Join the <span className="text-ember">Co-Creators</span>
+            Begin your <span className="text-ember">story</span>
           </h2>
           <p className="text-stone text-lg max-w-xl mx-auto font-body">
-            Help shape Zenith from day one. Be part of building something
-            meaningful.
+            Join the waitlist and be among the first to meet your new companion.
           </p>
         </motion.div>
 
@@ -66,7 +65,7 @@ const FinalCTA: React.FC = () => {
           viewport={{ once: true }}
           className="max-w-md mx-auto"
         >
-          <EmailForm buttonText="Become a Co-Creator" />
+          <EmailForm buttonText="Join the Waitlist" />
         </motion.div>
 
         {/* Trust note */}
@@ -76,7 +75,7 @@ const FinalCTA: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/50 text-sm mt-8 font-body"
         >
-          No spam. Just meaningful updates about Zenith's journey.
+          No spam. Just updates when Zenith is ready for you.
         </motion.p>
       </div>
     </section>

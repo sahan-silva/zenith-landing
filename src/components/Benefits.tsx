@@ -13,19 +13,19 @@ import { motion } from 'framer-motion';
 const Benefits: React.FC = () => {
   const benefits = [
     {
-      title: 'Clarity',
+      title: 'Just Talk',
       description:
-        "See patterns you've been missing. Zenith's AI surfaces recurring themes, emotions, and insights from your reflections—without ever sending your words to the cloud.",
+        "No blank page anxiety. Speak your thoughts and Zenith transcribes them instantly. Talk four times faster than you type—your stream of consciousness becomes a searchable record.",
     },
     {
-      title: 'Momentum',
+      title: 'Your Life, Organized',
       description:
-        'Turn insights into action. Get personalized prompts and action items based on your own patterns. Stop journaling into the void.',
+        'Zenith reads between the lines. It automatically surfaces your goals, dreams, and recurring themes—building a picture of who you are and who you\'re becoming.',
     },
     {
-      title: 'Privacy',
+      title: 'A Friend Who Remembers',
       description:
-        'Your words never leave your device. Unlike other AI tools, Zenith runs entirely locally. Your journal is truly yours.',
+        'Weekly insights from an AI that knows your story. Not generic advice—reflections drawn from your own words, your own patterns, your own journey.',
     },
   ];
 
@@ -46,12 +46,12 @@ const Benefits: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-cream mb-4 tracking-tight">
-            Journaling that actually{' '}
-            <span className="text-ember">works for you</span>
+            The journal that{' '}
+            <span className="text-ember">understands you</span>
           </h2>
           <p className="text-stone text-lg max-w-2xl mx-auto font-body">
-            Zenith combines the power of AI with the privacy of local-first
-            software.
+            Zenith is an AI companion that listens, remembers, and helps you
+            see the bigger picture of your life.
           </p>
         </motion.div>
 

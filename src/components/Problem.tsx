@@ -13,16 +13,16 @@ import { motion } from 'framer-motion';
 const Problem: React.FC = () => {
   const painPoints = [
     {
-      emphasis: 'You know reflection matters...',
-      detail: "It's how you've helped countless clients break through their barriers.",
+      emphasis: 'You have goals scattered across a dozen apps...',
+      detail: 'Tasks in one place, notes in another, voice memos you never listen to again.',
     },
     {
-      emphasis: 'But staring at a blank page feels like one more task...',
-      detail: 'After a full day of holding space for others, who has the energy?',
+      emphasis: 'You sense patterns in your life but can\'t quite name them...',
+      detail: 'The same feelings keep coming up. The same obstacles. If only you could step back and see it clearly.',
     },
     {
-      emphasis: 'And when you do write, where do those insights go?',
-      detail: 'Lost in notebooks, forgotten in apps, never connected to the bigger picture.',
+      emphasis: 'And when you do reflect, nothing sticks...',
+      detail: 'Insights fade. Intentions get lost. You\'re left wondering: what was that breakthrough I had last month?',
     },
   ];
 
@@ -43,10 +43,10 @@ const Problem: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
-            Journaling is powerful.
+            Life moves fast.
           </h2>
           <p className="font-display text-2xl sm:text-3xl text-stone">
-            But who has the time?
+            Your self-awareness shouldn't get left behind.
           </p>
         </motion.div>
 
@@ -75,7 +75,7 @@ const Problem: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-20 italic font-body"
         >
-          What if there was a better way?
+          What if you had a companion who remembered everything—and helped you see what it all means?
         </motion.p>
       </div>
     </section>
