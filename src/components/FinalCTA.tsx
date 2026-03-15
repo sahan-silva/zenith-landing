@@ -2,7 +2,8 @@
  * src/components/FinalCTA.tsx
  *
  * Final Call-to-Action section for Zenith Journal landing page.
- * Quiet Confidence redesign: Simple incentive list, no animated orbs.
+ * Japanese Aesthetic + Liquid Glass redesign: glass-hero card wrapping,
+ * ember accent CTA button.
  *
  * Related: EmailForm.tsx, ZenithLanding.tsx
  */
@@ -19,7 +20,6 @@ const FinalCTA: React.FC = () => {
     'Start building your story first',
   ];
 
-  // Single fade-in animation (Quiet Confidence constraint)
   const fadeIn = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -27,8 +27,8 @@ const FinalCTA: React.FC = () => {
   };
 
   return (
-    <section className="relative py-24 sm:py-32 bg-ink font-body overflow-hidden">
-      <div className="relative z-10 max-w-3xl mx-auto px-6">
+    <section className="relative py-24 sm:py-32 font-body overflow-hidden px-6">
+      <div className="relative z-10 max-w-3xl mx-auto glass-hero rounded-[var(--radius-xl)] p-8 sm:p-12">
         {/* Section Header */}
         <motion.div
           {...fadeIn}
@@ -43,15 +43,18 @@ const FinalCTA: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Incentives - Simple text list */}
+        {/* Incentives - glass-surface pills */}
         <motion.div
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.1 }}
           viewport={{ once: true, margin: '-50px' }}
-          className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-12 text-stone"
+          className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {incentives.map((incentive) => (
-            <span key={incentive} className="flex items-center gap-2">
+            <span
+              key={incentive}
+              className="flex items-center gap-2 glass-surface rounded-[var(--radius-pill)] px-4 py-2 text-stone text-sm"
+            >
               <span className="text-ember">+</span>
               <span>{incentive}</span>
             </span>

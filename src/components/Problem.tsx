@@ -2,7 +2,8 @@
  * src/components/Problem.tsx
  *
  * Problem section for Zenith Journal landing page.
- * Quiet Confidence redesign: Typography-driven hierarchy, warm stone accents.
+ * Japanese Aesthetic + Liquid Glass redesign: glass-surface pain-point cards
+ * with rounded-lg radii.
  *
  * Related: ZenithLanding.tsx
  */
@@ -14,19 +15,21 @@ const Problem: React.FC = () => {
   const painPoints = [
     {
       emphasis: 'You have goals scattered across a dozen apps...',
-      detail: 'Tasks in one place, notes in another, voice memos you never listen to again.',
+      detail:
+        'Tasks in one place, notes in another, voice memos you never listen to again.',
     },
     {
-      emphasis: 'You sense patterns in your life but can\'t quite name them...',
-      detail: 'The same feelings keep coming up. The same obstacles. If only you could step back and see it clearly.',
+      emphasis: "You sense patterns in your life but can't quite name them...",
+      detail:
+        "The same feelings keep coming up. The same obstacles. If only you could step back and see it clearly.",
     },
     {
       emphasis: 'And when you do reflect, nothing sticks...',
-      detail: 'Insights fade. Intentions get lost. You\'re left wondering: what was that breakthrough I had last month?',
+      detail:
+        "Insights fade. Intentions get lost. You're left wondering: what was that breakthrough I had last month?",
     },
   ];
 
-  // Single fade-in animation (Quiet Confidence constraint)
   const fadeIn = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -34,7 +37,7 @@ const Problem: React.FC = () => {
   };
 
   return (
-    <section className="relative py-24 sm:py-32 bg-ink font-body">
+    <section className="relative py-24 sm:py-32 font-body">
       <div className="max-w-3xl mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -50,15 +53,15 @@ const Problem: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Pain Points - Simple left border accent */}
-        <div className="space-y-10">
+        {/* Pain Points - glass-surface cards */}
+        <div className="space-y-6">
           {painPoints.map((point, index) => (
             <motion.div
               key={index}
               {...fadeIn}
               transition={{ ...fadeIn.transition, delay: index * 0.1 }}
               viewport={{ once: true, margin: '-50px' }}
-              className="relative pl-6 border-l-2 border-ember/40"
+              className="glass-surface rounded-[var(--radius-lg)] p-6 border-l-2 border-ember/40"
             >
               <p className="text-xl sm:text-2xl text-cream font-medium mb-2 font-body">
                 {point.emphasis}
@@ -75,7 +78,8 @@ const Problem: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-20 italic font-body"
         >
-          What if you had a companion who remembered everything—and helped you see what it all means?
+          What if you had a companion who remembered everything—and helped you
+          see what it all means?
         </motion.p>
       </div>
     </section>

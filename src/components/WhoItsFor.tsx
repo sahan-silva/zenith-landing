@@ -2,7 +2,8 @@
  * src/components/WhoItsFor.tsx
  *
  * Who It's For section for Zenith Journal landing page.
- * Quiet Confidence redesign: Clean checklist, ember accents, no hover effects.
+ * Japanese Aesthetic + Liquid Glass redesign: glass-interactive checklist items
+ * with rounded-lg radii.
  *
  * Related: ZenithLanding.tsx
  */
@@ -15,10 +16,9 @@ const WhoItsFor: React.FC = () => {
     'You have thoughts worth remembering—but they slip away',
     'You sense patterns in your life but struggle to name them',
     "You're tired of productivity apps that don't understand purpose",
-    'You want clarity about who you are and where you\'re going',
+    "You want clarity about who you are and where you're going",
   ];
 
-  // Single fade-in animation (Quiet Confidence constraint)
   const fadeIn = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -26,7 +26,7 @@ const WhoItsFor: React.FC = () => {
   };
 
   return (
-    <section className="relative py-24 sm:py-32 bg-ink font-body">
+    <section className="relative py-24 sm:py-32 font-body">
       <div className="max-w-2xl mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -42,15 +42,15 @@ const WhoItsFor: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Checklist - Simple, typography-driven */}
-        <div className="space-y-6">
+        {/* Checklist - glass-interactive items */}
+        <div className="space-y-4">
           {checklistItems.map((item, index) => (
             <motion.div
               key={index}
               {...fadeIn}
               transition={{ ...fadeIn.transition, delay: index * 0.1 }}
               viewport={{ once: true, margin: '-50px' }}
-              className="flex items-start gap-4"
+              className="flex items-start gap-4 glass-interactive rounded-[var(--radius-lg)] p-4"
             >
               <span className="text-ember text-xl mt-0.5 font-body">+</span>
               <p className="text-cream text-lg leading-relaxed font-body">

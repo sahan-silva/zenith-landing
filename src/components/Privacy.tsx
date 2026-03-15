@@ -2,7 +2,8 @@
  * src/components/Privacy.tsx
  *
  * Privacy Difference section for Zenith Journal landing page.
- * Quiet Confidence redesign: Clean comparison, no colored panels or gradients.
+ * Japanese Aesthetic + Liquid Glass redesign: glass-surface comparison panels
+ * with rounded-xl radii.
  *
  * Related: ZenithLanding.tsx
  */
@@ -11,7 +12,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Privacy: React.FC = () => {
-  // Single fade-in animation (Quiet Confidence constraint)
   const fadeIn = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -19,7 +19,7 @@ const Privacy: React.FC = () => {
   };
 
   return (
-    <section className="relative py-24 sm:py-32 bg-ink font-body overflow-hidden">
+    <section className="relative py-24 sm:py-32 font-body overflow-hidden">
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -32,13 +32,14 @@ const Privacy: React.FC = () => {
           </h2>
         </motion.div>
 
-        {/* Comparison - Simple two-column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16">
+        {/* Comparison - glass-surface panels */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
           {/* Other AI Apps */}
           <motion.div
             {...fadeIn}
             transition={{ ...fadeIn.transition, delay: 0.1 }}
             viewport={{ once: true }}
+            className="glass-surface rounded-[var(--radius-xl)] p-8"
           >
             <h3 className="font-display text-xl font-bold text-stone/60 mb-6 tracking-tight">
               Other AI Apps
@@ -64,6 +65,7 @@ const Privacy: React.FC = () => {
             {...fadeIn}
             transition={{ ...fadeIn.transition, delay: 0.2 }}
             viewport={{ once: true }}
+            className="glass-interactive rounded-[var(--radius-xl)] p-8"
           >
             <h3 className="font-display text-xl font-bold text-ember mb-6 tracking-tight">
               Zenith Journal
@@ -99,7 +101,8 @@ const Privacy: React.FC = () => {
           className="text-center border-t border-stone/20 pt-12"
         >
           <p className="font-display text-2xl sm:text-3xl font-medium text-cream tracking-tight">
-            Your story is <span className="text-ember">sacred</span>. We treat it that way.
+            Your story is <span className="text-ember">sacred</span>. We treat
+            it that way.
           </p>
         </motion.div>
       </div>

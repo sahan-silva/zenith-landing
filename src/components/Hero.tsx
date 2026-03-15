@@ -2,7 +2,8 @@
  * src/components/Hero.tsx
  *
  * Hero section for Zenith Journal landing page.
- * Quiet Confidence redesign: Typography-first, warm minimalism, no gradients/orbs.
+ * Japanese Aesthetic + Liquid Glass redesign: glass-interactive CTAs,
+ * ember accent, pill-radius buttons.
  *
  * Related: EmailForm.tsx, ZenithLanding.tsx
  */
@@ -12,7 +13,6 @@ import { motion } from 'framer-motion';
 import EmailForm from './EmailForm';
 
 const Hero: React.FC = () => {
-  // Single, simple fade-in animation (Quiet Confidence constraint)
   const fadeIn = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -20,19 +20,19 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-ink font-body">
-      {/* Content - Typography-first, no background effects */}
+    <section className="relative min-h-screen flex items-center justify-center font-body">
+      {/* Content - Typography-first */}
       <div className="relative z-10 max-w-3xl mx-auto px-6 py-24 text-center">
-        {/* Status badge - understated */}
+        {/* Status badge - glass-interactive */}
         <motion.div
           {...fadeIn}
-          className="inline-flex items-center gap-2 px-4 py-2 mb-10 border border-stone/30 rounded-md"
+          className="inline-flex items-center gap-2 px-4 py-2 mb-10 glass-interactive rounded-[var(--radius-pill)]"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-ember" />
           <span className="text-sm text-stone font-body">Coming Soon</span>
         </motion.div>
 
-        {/* Headline - Serif display font for authority */}
+        {/* Headline */}
         <motion.h1
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.1 }}
@@ -43,13 +43,14 @@ const Hero: React.FC = () => {
           <span className="text-ember">Zenith helps you see it.</span>
         </motion.h1>
 
-        {/* Subhead - Body font, warm stone color */}
+        {/* Subhead */}
         <motion.p
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.2 }}
           className="text-lg sm:text-xl text-stone mb-12 max-w-2xl mx-auto leading-relaxed font-body"
         >
-          Just talk. Zenith listens, remembers, and surfaces the goals, patterns, and moments that matter—so you can finally connect the dots.
+          Just talk. Zenith listens, remembers, and surfaces the goals,
+          patterns, and moments that matter—so you can finally connect the dots.
         </motion.p>
 
         {/* Email Form */}
@@ -61,11 +62,11 @@ const Hero: React.FC = () => {
           <EmailForm />
         </motion.div>
 
-        {/* Trust badges - Simple text, no icons */}
+        {/* Trust badges - glass-surface pill */}
         <motion.div
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.4 }}
-          className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-stone text-sm"
+          className="inline-flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-stone text-sm glass-surface rounded-[var(--radius-pill)] px-6 py-3"
         >
           <span>Voice-First Capture</span>
           <span className="hidden sm:inline text-stone/30">|</span>

@@ -2,7 +2,8 @@
  * src/components/EmailForm.tsx
  *
  * Reusable email capture form for Zenith Journal waitlist.
- * Quiet Confidence redesign: Ember accent button, clean input styling.
+ * Japanese Aesthetic + Liquid Glass redesign: glass-surface input,
+ * ember accent glass-interactive submit button.
  *
  * Related: utils/waitlist.ts, Hero.tsx, FinalCTA.tsx
  */
@@ -52,7 +53,7 @@ const EmailForm: React.FC<EmailFormProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' as const }}
-        className={`flex items-center gap-3 p-4 border border-ember/30 rounded-md ${className}`}
+        className={`flex items-center gap-3 p-4 glass-surface rounded-[var(--radius-lg)] ${className}`}
       >
         <CheckCircle className="w-5 h-5 text-ember flex-shrink-0" />
         <p className="text-cream font-body">
@@ -78,8 +79,8 @@ const EmailForm: React.FC<EmailFormProps> = ({
             disabled={formState === 'loading'}
             aria-label="Email address"
             aria-describedby={formState === 'error' ? 'email-error' : undefined}
-            className={`w-full px-4 py-3 rounded-md bg-ink border font-body
-              ${formState === 'error' ? 'border-red-500/50' : 'border-stone/30'}
+            className={`w-full px-4 py-3 rounded-[var(--radius-lg)] glass-surface font-body
+              ${formState === 'error' ? 'border-red-500/50' : ''}
               text-cream placeholder-stone/50
               focus:outline-none focus:border-ember/50 focus:ring-1 focus:ring-ember/20
               transition-all duration-500 ease-out
@@ -91,8 +92,8 @@ const EmailForm: React.FC<EmailFormProps> = ({
           disabled={formState === 'loading' || !email}
           whileHover={{ scale: formState === 'loading' ? 1 : 1.01 }}
           whileTap={{ scale: formState === 'loading' ? 1 : 0.99 }}
-          className={`px-6 py-3 rounded-md font-medium font-body
-            bg-ember text-ink
+          className={`px-6 py-3 rounded-[var(--radius-pill)] font-medium font-body
+            bg-ember text-ink glass-interactive
             transition-all duration-500 ease-out
             hover:bg-dawn hover:shadow-ember-glow
             disabled:opacity-50 disabled:cursor-not-allowed

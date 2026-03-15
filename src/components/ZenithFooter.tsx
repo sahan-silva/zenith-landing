@@ -2,7 +2,7 @@
  * src/components/ZenithFooter.tsx
  *
  * Minimal footer for Zenith Journal landing page.
- * Quiet Confidence redesign: Clean typography, no gradients.
+ * Japanese Aesthetic + Liquid Glass redesign: glass-surface background treatment.
  *
  * Related: ZenithLanding.tsx
  */
@@ -13,7 +13,6 @@ import { motion } from 'framer-motion';
 const ZenithFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  // Single fade-in animation (Quiet Confidence constraint)
   const fadeIn = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -21,7 +20,7 @@ const ZenithFooter: React.FC = () => {
   };
 
   return (
-    <footer className="relative py-12 bg-ink border-t border-stone/20 font-body">
+    <footer className="relative py-12 glass-surface border-t border-stone/10 font-body">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           {...fadeIn}
