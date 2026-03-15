@@ -10,13 +10,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const USE_CAREER_RESILIENCE_POSITIONING = import.meta.env.VITE_USE_CAREER_RESILIENCE_POSITIONING === 'true';
+
 const WhoItsFor: React.FC = () => {
-  const checklistItems = [
-    'You have thoughts worth remembering—but they slip away',
-    'You sense patterns in your life but struggle to name them',
-    "You're tired of productivity apps that don't understand purpose",
-    'You want clarity about who you are and where you\'re going',
-  ];
+  const checklistItems = USE_CAREER_RESILIENCE_POSITIONING
+    ? [
+        'AI is changing your industry faster than you expected',
+        'You make decisions that require judgment no algorithm has yet',
+        'You want to stay sharp, adaptable, and hard to replace',
+        'You sense patterns in your work but haven\u2019t named them yet',
+      ]
+    : [
+        'You have thoughts worth remembering\u2014but they slip away',
+        'You sense patterns in your life but struggle to name them',
+        "You're tired of productivity apps that don't understand purpose",
+        'You want clarity about who you are and where you\'re going',
+      ];
 
   // Single fade-in animation (Quiet Confidence constraint)
   const fadeIn = {
@@ -38,7 +47,9 @@ const WhoItsFor: React.FC = () => {
             Is this <span className="text-ember">you</span>?
           </h2>
           <p className="text-stone text-lg font-body">
-            Zenith is for anyone seeking meaning, not just metrics.
+            {USE_CAREER_RESILIENCE_POSITIONING
+              ? 'Zenith is for knowledge workers who refuse to become obsolete.'
+              : 'Zenith is for anyone seeking meaning, not just metrics.'}
           </p>
         </motion.div>
 
@@ -67,7 +78,9 @@ const WhoItsFor: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-16 font-body"
         >
-          If any of these resonate, Zenith was built with you in mind.
+          {USE_CAREER_RESILIENCE_POSITIONING
+            ? 'If staying relevant in an AI-transformed career matters to you, Zenith was built with you in mind.'
+            : 'If any of these resonate, Zenith was built with you in mind.'}
         </motion.p>
       </div>
     </section>

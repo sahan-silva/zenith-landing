@@ -11,6 +11,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import EmailForm from './EmailForm';
 
+const USE_CAREER_RESILIENCE_POSITIONING = import.meta.env.VITE_USE_CAREER_RESILIENCE_POSITIONING === 'true';
+
 const Hero: React.FC = () => {
   // Single, simple fade-in animation (Quiet Confidence constraint)
   const fadeIn = {
@@ -38,9 +40,17 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.1 }}
           className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-cream mb-8 leading-tight tracking-tight"
         >
-          Your life has a story.
-          <br />
-          <span className="text-ember">Zenith helps you see it.</span>
+          {USE_CAREER_RESILIENCE_POSITIONING ? (
+            <>
+              Stay sharp while AI reshapes your field.
+            </>
+          ) : (
+            <>
+              Your life has a story.
+              <br />
+              <span className="text-ember">Zenith helps you see it.</span>
+            </>
+          )}
         </motion.h1>
 
         {/* Subhead - Body font, warm stone color */}
@@ -49,7 +59,9 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.2 }}
           className="text-lg sm:text-xl text-stone mb-12 max-w-2xl mx-auto leading-relaxed font-body"
         >
-          Just talk. Zenith listens, remembers, and surfaces the goals, patterns, and moments that matter—so you can finally connect the dots.
+          {USE_CAREER_RESILIENCE_POSITIONING
+            ? <>Zenith helps knowledge workers build the judgment, self-awareness, and adaptability that <span className="text-ember">no AI can replace</span>.</>
+            : 'Just talk. Zenith listens, remembers, and surfaces the goals, patterns, and moments that matter—so you can finally connect the dots.'}
         </motion.p>
 
         {/* Email Form */}
@@ -69,7 +81,7 @@ const Hero: React.FC = () => {
         >
           <span>Voice-First Capture</span>
           <span className="hidden sm:inline text-stone/30">|</span>
-          <span>AI That Remembers You</span>
+          <span>{USE_CAREER_RESILIENCE_POSITIONING ? 'Build Judgment Daily' : 'AI That Remembers You'}</span>
           <span className="hidden sm:inline text-stone/30">|</span>
           <span>100% Private</span>
         </motion.div>

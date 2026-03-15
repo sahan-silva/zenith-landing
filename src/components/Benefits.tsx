@@ -10,24 +10,44 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const USE_CAREER_RESILIENCE_POSITIONING = import.meta.env.VITE_USE_CAREER_RESILIENCE_POSITIONING === 'true';
+
 const Benefits: React.FC = () => {
-  const benefits = [
-    {
-      title: 'Just Talk',
-      description:
-        "No blank page anxiety. Speak your thoughts and Zenith transcribes them instantly. Talk four times faster than you type—your stream of consciousness becomes a searchable record.",
-    },
-    {
-      title: 'Your Life, Organized',
-      description:
-        'Zenith reads between the lines. It automatically surfaces your goals, dreams, and recurring themes—building a picture of who you are and who you\'re becoming.',
-    },
-    {
-      title: 'A Friend Who Remembers',
-      description:
-        'Weekly insights from an AI that knows your story. Not generic advice—reflections drawn from your own words, your own patterns, your own journey.',
-    },
-  ];
+  const benefits = USE_CAREER_RESILIENCE_POSITIONING
+    ? [
+        {
+          title: 'Capture Your Thinking',
+          description:
+            "Don't lose the insights that make you indispensable. Speak your analysis, decisions, and reasoning\u2014four times faster than typing.",
+        },
+        {
+          title: 'Spot Your Edge',
+          description:
+            'Zenith identifies the judgment patterns, decision frameworks, and thinking strengths that set you apart from automated workflows.',
+        },
+        {
+          title: 'A Coach That Knows You',
+          description:
+            'Weekly reflections drawn from your own reasoning history\u2014not generic career advice, but a mirror to your own thinking patterns.',
+        },
+      ]
+    : [
+        {
+          title: 'Just Talk',
+          description:
+            "No blank page anxiety. Speak your thoughts and Zenith transcribes them instantly. Talk four times faster than you type\u2014your stream of consciousness becomes a searchable record.",
+        },
+        {
+          title: 'Your Life, Organized',
+          description:
+            'Zenith reads between the lines. It automatically surfaces your goals, dreams, and recurring themes\u2014building a picture of who you are and who you\'re becoming.',
+        },
+        {
+          title: 'A Friend Who Remembers',
+          description:
+            'Weekly insights from an AI that knows your story. Not generic advice\u2014reflections drawn from your own words, your own patterns, your own journey.',
+        },
+      ];
 
   // Single fade-in animation (Quiet Confidence constraint)
   const fadeIn = {
@@ -46,12 +66,16 @@ const Benefits: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-cream mb-4 tracking-tight">
-            The journal that{' '}
-            <span className="text-ember">understands you</span>
+            {USE_CAREER_RESILIENCE_POSITIONING ? (
+              <>The toolkit that{' '}<span className="text-ember">sharpens you</span></>
+            ) : (
+              <>The journal that{' '}<span className="text-ember">understands you</span></>
+            )}
           </h2>
           <p className="text-stone text-lg max-w-2xl mx-auto font-body">
-            Zenith is an AI companion that listens, remembers, and helps you
-            see the bigger picture of your life.
+            {USE_CAREER_RESILIENCE_POSITIONING
+              ? 'Zenith is a career resilience companion that captures, analyzes, and strengthens the thinking skills that keep you ahead.'
+              : 'Zenith is an AI companion that listens, remembers, and helps you see the bigger picture of your life.'}
           </p>
         </motion.div>
 
