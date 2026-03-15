@@ -2,31 +2,57 @@
  * src/index.css
  *
  * Global styles for Zenith Journal landing page.
- * Implements the Quiet Confidence design system.
+ * Implements the Quiet Confidence design system with Liquid Glass foundations.
  *
  * Related: tailwind.config.js, docs/ADR-001-quiet-confidence-visual-system.md
  */
-
-/* Quiet Confidence Typography - Libre Baskerville (Display) + Source Sans 3 (Body) */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap');
 
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
 @layer base {
   :root {
-    /* Quiet Confidence tokens for potential future theming */
+    /* Quiet Confidence tokens (backward compat) */
     --qc-ink: #0a0a0b;
     --qc-cream: #f5f2ed;
     --qc-stone: #9a918a;
     --qc-ember: #c97a4a;
     --qc-dawn: #d4a574;
+
+    /* Liquid Glass surfaces */
+    --gl-surface-1: rgba(255, 255, 255, 0.06);
+    --gl-surface-2: rgba(255, 255, 255, 0.10);
+    --gl-surface-hero: rgba(255, 255, 255, 0.14);
+    --gl-border: rgba(255, 255, 255, 0.12);
+    --gl-border-strong: rgba(255, 255, 255, 0.20);
+    --gl-blur-sm: blur(8px);
+    --gl-blur-md: blur(16px);
+    --gl-blur-lg: blur(32px);
+    --gl-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    --gl-shadow-hero: 0 8px 48px rgba(0, 0, 0, 0.50), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+    /* Apple-scale radius */
+    --radius-xs: 6px;
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-2xl: 40px;
+    --radius-pill: 9999px;
+
+    /* Japanese-inspired palette additions */
+    --color-washi: #f0ebe3;
+    --color-sumi: #1a1a20;
+    --color-indigo-jp: #2d3a5e;
+    --color-sakura: #e8b4c4;
+    --color-bamboo: #7a9e7e;
+    --color-gold-jp: #c9a85c;
   }
 
   body {
     background-color: #0a0a0b;
     color: #f5f2ed;
-    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     @apply antialiased overflow-x-hidden;
   }
 
@@ -42,7 +68,7 @@
   h4,
   h5,
   h6 {
-    font-family: 'Libre Baskerville', Georgia, serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     @apply tracking-tight font-bold;
   }
 }
@@ -53,12 +79,12 @@
   /* Base container for Quiet Confidence sections */
   .qc-section {
     @apply bg-ink text-cream;
-    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
-  /* Quiet Confidence Headings - Serif display font */
+  /* Quiet Confidence Headings - now Helvetica Neue sans stack */
   .qc-heading {
-    font-family: 'Libre Baskerville', Georgia, serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     @apply text-cream tracking-tight;
   }
 
@@ -94,4 +120,54 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  /* Glass utility classes */
+  .glass-surface {
+    background: var(--gl-surface-1);
+    border: 1px solid var(--gl-border);
+    backdrop-filter: var(--gl-blur-md);
+    -webkit-backdrop-filter: var(--gl-blur-md);
+    box-shadow: var(--gl-shadow);
+  }
+
+  .glass-hero {
+    background: var(--gl-surface-hero);
+    border: 1px solid var(--gl-border-strong);
+    backdrop-filter: var(--gl-blur-lg);
+    -webkit-backdrop-filter: var(--gl-blur-lg);
+    box-shadow: var(--gl-shadow-hero);
+    border-radius: var(--radius-xl);
+  }
+
+  .glass-interactive {
+    background: var(--gl-surface-2);
+    border: 1px solid var(--gl-border);
+    backdrop-filter: var(--gl-blur-sm);
+    -webkit-backdrop-filter: var(--gl-blur-sm);
+    box-shadow: var(--gl-shadow);
+    border-radius: var(--radius-lg);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+  .glass-interactive:hover {
+    background: var(--gl-surface-hero);
+    box-shadow: var(--gl-shadow-hero);
+  }
+}
+
+/* Water ripple animation */
+@keyframes water-ripple {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  50% { transform: scale(1.05); opacity: 0.3; }
+  100% { transform: scale(1.2); opacity: 0; }
+}
+
+@keyframes float-ink {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.4; }
+  33% { transform: translateY(-8px) rotate(1deg); opacity: 0.6; }
+  66% { transform: translateY(4px) rotate(-1deg); opacity: 0.3; }
+}
+
+@keyframes sumi-fade {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
 }

@@ -16,17 +16,35 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        // Quiet Confidence Typography
-        'display': ['Libre Baskerville', 'Georgia', 'serif'],
-        'body': ['Source Sans 3', 'system-ui', 'sans-serif'],
+        // Helvetica Neue sans stack (replaces Quiet Confidence serif/body split)
+        'sans': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+        // Legacy aliases for backward compat
+        'display': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+        'body': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
       },
       colors: {
-        // Quiet Confidence Palette
+        // Quiet Confidence Palette (backward compat)
         "ink": "#0a0a0b",           // Deep Ink - Primary background
         "cream": "#f5f2ed",          // Soft Cream - Primary text
         "stone": "#9a918a",          // Warm Stone - Secondary text
         "ember": "#c97a4a",          // Ember - Single accent (warmth, action)
         "dawn": "#d4a574",           // Dawn - Highlight hover states
+        // Japanese-inspired palette
+        "washi": "var(--color-washi)",
+        "sumi": "var(--color-sumi)",
+        "indigo-jp": "var(--color-indigo-jp)",
+        "sakura": "var(--color-sakura)",
+        "bamboo": "var(--color-bamboo)",
+        "gold-jp": "var(--color-gold-jp)",
+      },
+      borderRadius: {
+        // Apple-scale radius mapped to CSS vars
+        "xs": "var(--radius-xs)",
+        "sm": "var(--radius-sm)",
+        "md": "var(--radius-md)",
+        "lg": "var(--radius-lg)",
+        "xl": "var(--radius-xl)",
+        "2xl": "var(--radius-2xl)",
       },
       boxShadow: {
         // Quiet Confidence - subtle ember glow for CTAs
