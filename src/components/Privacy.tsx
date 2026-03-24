@@ -4,6 +4,10 @@
  * Privacy Difference section for Zenith Journal landing page.
  * Quiet Confidence redesign: Clean comparison, no colored panels or gradients.
  *
+ * Positioning update (Mar 2026): Reframed privacy as a wellness concern — not just
+ * a feature checkbox. Mental health data deserves the same protection as medical data.
+ * Informed by Reddit r/Futurology discourse on data practices as a long-term health risk.
+ *
  * Related: ZenithLanding.tsx
  */
 
@@ -28,7 +32,8 @@ const Privacy: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
-            What makes Zenith <span className="text-ember">different</span>?
+            Privacy isn't a feature.<br />
+            <span className="text-ember">It's self-care.</span>
           </h2>
         </motion.div>
 
@@ -46,15 +51,15 @@ const Privacy: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-stone">
                 <span className="text-stone/40 mt-1">-</span>
-                <span>Your data trains their AI models</span>
+                <span>Your innermost thoughts become training data</span>
               </li>
               <li className="flex items-start gap-3 text-stone">
                 <span className="text-stone/40 mt-1">-</span>
-                <span>Sold to advertisers, analyzed for profit</span>
+                <span>Your mental health shared with advertisers</span>
               </li>
               <li className="flex items-start gap-3 text-stone">
                 <span className="text-stone/40 mt-1">-</span>
-                <span>You're the product, not the customer</span>
+                <span>Your vulnerability monetised, not protected</span>
               </li>
             </ul>
           </motion.div>
@@ -72,19 +77,19 @@ const Privacy: React.FC = () => {
               <li className="flex items-start gap-3 text-cream">
                 <span className="text-ember mt-1">+</span>
                 <span>
-                  <strong>Your journals are never sold or shared</strong>
+                  <strong>Your words stay on your device — always</strong>
                 </span>
               </li>
               <li className="flex items-start gap-3 text-cream">
                 <span className="text-ember mt-1">+</span>
                 <span>
-                  <strong>We don't train AI on your words</strong>
+                  <strong>Your healing is never sold or shared</strong>
                 </span>
               </li>
               <li className="flex items-start gap-3 text-cream">
                 <span className="text-ember mt-1">+</span>
                 <span>
-                  <strong>You are the customer, not the product</strong>
+                  <strong>You are the customer — and your wellbeing is the product</strong>
                 </span>
               </li>
             </ul>
@@ -99,7 +104,7 @@ const Privacy: React.FC = () => {
           className="text-center border-t border-stone/20 pt-12"
         >
           <p className="font-display text-2xl sm:text-3xl font-medium text-cream tracking-tight">
-            Your story is <span className="text-ember">sacred</span>. We treat it that way.
+            Your mental health deserves <span className="text-ember">privacy by default</span>. Not as an upgrade. Not as a promise. Built in.
           </p>
         </motion.div>
       </div>

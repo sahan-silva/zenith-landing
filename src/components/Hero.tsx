@@ -4,6 +4,9 @@
  * Hero section for Zenith Journal landing page.
  * Quiet Confidence redesign: Typography-first, warm minimalism, no gradients/orbs.
  *
+ * Trust badge updated (Mar 2026): "100% Private" → "Privacy-First Wellness" to reinforce
+ * the wellness-as-privacy positioning running through the Privacy section below.
+ *
  * Related: EmailForm.tsx, ZenithLanding.tsx
  */
 
@@ -71,7 +74,7 @@ const Hero: React.FC = () => {
           <span className="hidden sm:inline text-stone/30">|</span>
           <span>AI That Remembers You</span>
           <span className="hidden sm:inline text-stone/30">|</span>
-          <span>100% Private</span>
+          <span>Privacy-First Wellness</span>
         </motion.div>
       </div>
     </section>
