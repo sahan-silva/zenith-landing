@@ -4,6 +4,10 @@
  * Benefits section for Zenith Journal landing page.
  * Quiet Confidence redesign: Simple text blocks, ember accent, no glassmorphism.
  *
+ * Value-centric pivot (Mar 2026): Section header and benefit descriptions updated to
+ * emphasise time-efficiency and value-per-minute. The "Just Talk" benefit now leads
+ * with the 4× speed advantage as a concrete value prop, not just a feature.
+ *
  * Related: ZenithLanding.tsx
  */
 
@@ -15,17 +19,17 @@ const Benefits: React.FC = () => {
     {
       title: 'Just Talk',
       description:
-        "No blank page anxiety. Speak your thoughts and Zenith transcribes them instantly. Talk four times faster than you type—your stream of consciousness becomes a searchable record.",
+        "Talk four times faster than you type—so every minute you give Zenith returns four times the insight. No blank page, no wasted session. Just clarity at the speed of thought.",
     },
     {
       title: 'Your Life, Organized',
       description:
-        'Zenith reads between the lines. It automatically surfaces your goals, dreams, and recurring themes—building a picture of who you are and who you\'re becoming.',
+        'Zenith reads between the lines. It automatically surfaces your goals, dreams, and recurring themes—so five minutes with Zenith delivers what hours of scattered note-taking never could.',
     },
     {
       title: 'A Friend Who Remembers',
       description:
-        'Weekly insights from an AI that knows your story. Not generic advice—reflections drawn from your own words, your own patterns, your own journey.',
+        'Weekly insights from an AI that knows your story. Not generic advice—reflections drawn from your own words, your own patterns, your own journey. Your time, honoured.',
     },
   ];
 
@@ -47,11 +51,11 @@ const Benefits: React.FC = () => {
         >
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-cream mb-4 tracking-tight">
             The journal that{' '}
-            <span className="text-ember">understands you</span>
+            <span className="text-ember">respects your time</span>
           </h2>
           <p className="text-stone text-lg max-w-2xl mx-auto font-body">
-            Zenith is an AI companion that listens, remembers, and helps you
-            see the bigger picture of your life.
+            Zenith is an AI companion that listens, remembers, and delivers
+            real value with every session — not just more data to scroll through.
           </p>
         </motion.div>
 

@@ -17,6 +17,7 @@ const FinalCTA: React.FC = () => {
     'Shape the features we build',
     'Founding member pricing',
     'Start building your story first',
+    'More clarity per minute than any app you\'ve tried',
   ];
 
   // Single fade-in animation (Quiet Confidence constraint)

@@ -7,6 +7,10 @@
  * Trust badge updated (Mar 2026): "100% Private" → "Privacy-First Wellness" to reinforce
  * the wellness-as-privacy positioning running through the Privacy section below.
  *
+ * Value-centric pivot (Mar 2026): Subheading and first trust badge updated to position
+ * Zenith against attention-harvesting apps. Every minute with Zenith should deliver
+ * clarity — not just time logged. Source: Reddit r/Futurology user signals.
+ *
  * Related: EmailForm.tsx, ZenithLanding.tsx
  */
 
@@ -52,7 +56,7 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.2 }}
           className="text-lg sm:text-xl text-stone mb-12 max-w-2xl mx-auto leading-relaxed font-body"
         >
-          Just talk. Zenith listens, remembers, and surfaces the goals, patterns, and moments that matter—so you can finally connect the dots.
+          Just talk. Zenith turns every minute of reflection into real clarity — surfacing the goals, patterns, and moments that matter. Not time logged. Value delivered.
         </motion.p>
 
         {/* Email Form */}
@@ -70,7 +74,7 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.4 }}
           className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-stone text-sm"
         >
-          <span>Voice-First Capture</span>
+          <span>Every Minute Counts</span>
           <span className="hidden sm:inline text-stone/30">|</span>
           <span>AI That Remembers You</span>
           <span className="hidden sm:inline text-stone/30">|</span>

@@ -4,6 +4,10 @@
  * Problem section for Zenith Journal landing page.
  * Quiet Confidence redesign: Typography-driven hierarchy, warm stone accents.
  *
+ * Value-centric pivot (Mar 2026): Added attention-harvesting pain point to connect
+ * with users seeking apps that give back as much as they take. The subheader now
+ * frames self-awareness as something apps should respect, not compete with.
+ *
  * Related: ZenithLanding.tsx
  */
 
@@ -19,6 +23,10 @@ const Problem: React.FC = () => {
     {
       emphasis: 'You sense patterns in your life but can\'t quite name them...',
       detail: 'The same feelings keep coming up. The same obstacles. If only you could step back and see it clearly.',
+    },
+    {
+      emphasis: 'Most apps take your attention—and give nothing back...',
+      detail: 'You open them meaning to reflect, and close them having just scrolled. Thirty minutes gone. Nothing gained.',
     },
     {
       emphasis: 'And when you do reflect, nothing sticks...',
@@ -46,7 +54,7 @@ const Problem: React.FC = () => {
             Life moves fast.
           </h2>
           <p className="font-display text-2xl sm:text-3xl text-stone">
-            Your self-awareness shouldn't get left behind.
+            Your self-awareness shouldn't compete with apps built to harvest it.
           </p>
         </motion.div>
 
@@ -75,7 +83,7 @@ const Problem: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-20 italic font-body"
         >
-          What if you had a companion who remembered everything—and helped you see what it all means?
+          What if every minute you spent reflecting actually delivered something back to you?
         </motion.p>
       </div>
     </section>

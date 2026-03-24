@@ -4,6 +4,10 @@
  * Who It's For section for Zenith Journal landing page.
  * Quiet Confidence redesign: Clean checklist, ember accents, no hover effects.
  *
+ * Value-centric pivot (Mar 2026): Checklist item updated to name attention-harvesting
+ * explicitly — this resonates with users who are consciously rejecting apps that take
+ * without giving back. Subtitle layers value-per-minute into the meaning > metrics frame.
+ *
  * Related: ZenithLanding.tsx
  */
 
@@ -14,7 +18,7 @@ const WhoItsFor: React.FC = () => {
   const checklistItems = [
     'You have thoughts worth remembering—but they slip away',
     'You sense patterns in your life but struggle to name them',
-    "You're tired of productivity apps that don't understand purpose",
+    "You're tired of apps that harvest your attention without giving anything back",
     'You want clarity about who you are and where you\'re going',
   ];
 
@@ -38,7 +42,7 @@ const WhoItsFor: React.FC = () => {
             Is this <span className="text-ember">you</span>?
           </h2>
           <p className="text-stone text-lg font-body">
-            Zenith is for anyone seeking meaning, not just metrics.
+            Zenith is for anyone seeking meaning — and value in every minute they invest in themselves.
           </p>
         </motion.div>
 
