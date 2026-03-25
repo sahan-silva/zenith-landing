@@ -4,7 +4,15 @@
  * Who It's For section for Zenith Journal landing page.
  * Quiet Confidence redesign: Clean checklist, ember accents, no hover effects.
  *
- * Related: ZenithLanding.tsx
+ * Value-centric pivot (Mar 2026): Checklist item updated to name attention-harvesting
+ * explicitly — this resonates with users who are consciously rejecting apps that take
+ * without giving back. Subtitle layers value-per-minute into the meaning > metrics frame.
+ *
+ * Anti-engagement pivot (Mar 2026): Checklist sharpened to surface the specific
+ * frustration with engagement-trap apps (time-spent metrics, streak anxiety, no real
+ * growth). Closing statement updated to reinforce the value-delivered contract.
+ *
+ * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
 import React from 'react';
@@ -12,9 +20,10 @@ import { motion } from 'framer-motion';
 
 const WhoItsFor: React.FC = () => {
   const checklistItems = [
-    'You have thoughts worth remembering—but they slip away',
+    'You have thoughts worth remembering — but they slip away before you can act on them',
     'You sense patterns in your life but struggle to name them',
-    "You're tired of productivity apps that don't understand purpose",
+    "You're done with apps that count your time spent and call it progress",
+    "You want a tool that succeeds when you grow — not when you're addicted",
     'You want clarity about who you are and where you\'re going',
   ];
 
@@ -38,7 +47,7 @@ const WhoItsFor: React.FC = () => {
             Is this <span className="text-ember">you</span>?
           </h2>
           <p className="text-stone text-lg font-body">
-            Zenith is for anyone seeking meaning, not just metrics.
+            Zenith is for people who measure self-investment by what they gain — not by how long they stay.
           </p>
         </motion.div>
 
@@ -67,7 +76,7 @@ const WhoItsFor: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-16 font-body"
         >
-          If any of these resonate, Zenith was built with you in mind.
+          If any of these land, Zenith was built to give you back more than you put in.
         </motion.p>
       </div>
     </section>

@@ -4,7 +4,11 @@
  * Final Call-to-Action section for Zenith Journal landing page.
  * Quiet Confidence redesign: Simple incentive list, no animated orbs.
  *
- * Related: EmailForm.tsx, ZenithLanding.tsx
+ * Anti-engagement pivot (Mar 2026): Headline and incentive list updated to close
+ * on the value-per-minute contract. "Begin your story" replaced with the direct
+ * value promise: the CTA now names what you walk away with, not just what you join.
+ *
+ * Related: EmailForm.tsx, ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
 import React from 'react';
@@ -14,9 +18,10 @@ import EmailForm from './EmailForm';
 const FinalCTA: React.FC = () => {
   const incentives = [
     'Early access to the beta',
-    'Shape the features we build',
+    'Shape the features we build — we only ship what earns its place',
     'Founding member pricing',
-    'Start building your story first',
+    'Be first to experience a journal that measures what you leave with',
+    'More clarity per minute than any app you\'ve tried',
   ];
 
   // Single fade-in animation (Quiet Confidence constraint)
@@ -36,10 +41,11 @@ const FinalCTA: React.FC = () => {
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
-            Begin your <span className="text-ember">story</span>
+            Leave every session{' '}
+            <span className="text-ember">better off.</span>
           </h2>
           <p className="text-stone text-lg max-w-xl mx-auto font-body">
-            Join the waitlist and be among the first to meet your new companion.
+            Join the waitlist. Zenith measures what you walk away with — not how long you stayed.
           </p>
         </motion.div>
 
@@ -75,7 +81,7 @@ const FinalCTA: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/50 text-sm mt-8 font-body"
         >
-          No spam. Just updates when Zenith is ready for you.
+          No spam. No engagement tricks. Just one update when Zenith is ready for you.
         </motion.p>
       </div>
     </section>

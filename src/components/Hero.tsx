@@ -7,6 +7,15 @@
  * Trust badge updated (Mar 2026): "100% Private" → "Privacy-First Wellness" to reinforce
  * the wellness-as-privacy positioning running through the Privacy section below.
  *
+ * Value-centric pivot (Mar 2026): Subheading and first trust badge updated to position
+ * Zenith against attention-harvesting apps. Every minute with Zenith should deliver
+ * clarity — not just time logged. Source: Reddit r/Futurology user signals.
+ *
+ * Anti-engagement pivot (Mar 2026): Headline restructured to lead with value-delivered
+ * as the primary narrative arc, not just a subhead qualifier. The contrast between
+ * "not time logged" and "value delivered" is now the core promise — surfaced in both
+ * the headline and subhead to establish the anti-engagement positioning immediately.
+ *
  * Related: EmailForm.tsx, ZenithLanding.tsx
  */
 
@@ -35,24 +44,24 @@ const Hero: React.FC = () => {
           <span className="text-sm text-stone font-body">Coming Soon</span>
         </motion.div>
 
-        {/* Headline - Serif display font for authority */}
+        {/* Headline - Value-delivered as primary narrative arc, not just a tagline */}
         <motion.h1
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.1 }}
           className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-cream mb-8 leading-tight tracking-tight"
         >
-          Your life has a story.
+          Value delivered.
           <br />
-          <span className="text-ember">Zenith helps you see it.</span>
+          <span className="text-ember">Not time spent.</span>
         </motion.h1>
 
-        {/* Subhead - Body font, warm stone color */}
+        {/* Subhead - Reinforces contrast: most apps harvest attention, Zenith returns clarity */}
         <motion.p
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.2 }}
           className="text-lg sm:text-xl text-stone mb-12 max-w-2xl mx-auto leading-relaxed font-body"
         >
-          Just talk. Zenith listens, remembers, and surfaces the goals, patterns, and moments that matter—so you can finally connect the dots.
+          Most apps measure how long you stay. Zenith measures what you leave with. Just talk — every minute of reflection surfaces the goals, patterns, and clarity that actually move your life forward.
         </motion.p>
 
         {/* Email Form */}
@@ -70,7 +79,7 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.4 }}
           className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-stone text-sm"
         >
-          <span>Voice-First Capture</span>
+          <span>Value Delivered, Not Time Spent</span>
           <span className="hidden sm:inline text-stone/30">|</span>
           <span>AI That Remembers You</span>
           <span className="hidden sm:inline text-stone/30">|</span>

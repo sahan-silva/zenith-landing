@@ -4,7 +4,16 @@
  * Problem section for Zenith Journal landing page.
  * Quiet Confidence redesign: Typography-driven hierarchy, warm stone accents.
  *
- * Related: ZenithLanding.tsx
+ * Value-centric pivot (Mar 2026): Added attention-harvesting pain point to connect
+ * with users seeking apps that give back as much as they take. The subheader now
+ * frames self-awareness as something apps should respect, not compete with.
+ *
+ * Anti-engagement pivot (Mar 2026): Pain points now explicitly name the time-spent
+ * vs value-delivered contrast drawn from Reddit sentiment. The third pain point
+ * calls out engagement-maximizing design by name — "designed to keep you scrolling,
+ * not to help you grow" — to resonate with users who recognise the pattern.
+ *
+ * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
 import React from 'react';
@@ -14,11 +23,15 @@ const Problem: React.FC = () => {
   const painPoints = [
     {
       emphasis: 'You have goals scattered across a dozen apps...',
-      detail: 'Tasks in one place, notes in another, voice memos you never listen to again.',
+      detail: 'Tasks in one place, notes in another, voice memos you never listen to again. Fragmentation is the enemy of self-knowledge.',
     },
     {
       emphasis: 'You sense patterns in your life but can\'t quite name them...',
       detail: 'The same feelings keep coming up. The same obstacles. If only you could step back and see it clearly.',
+    },
+    {
+      emphasis: 'Every other app measures time spent — not value delivered...',
+      detail: 'They\'re designed to keep you scrolling, not to help you grow. Their metric is your attention. Yours should be your progress.',
     },
     {
       emphasis: 'And when you do reflect, nothing sticks...',
@@ -43,10 +56,12 @@ const Problem: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
-            Life moves fast.
+            You deserve more
+            <br />
+            than time logged.
           </h2>
           <p className="font-display text-2xl sm:text-3xl text-stone">
-            Your self-awareness shouldn't get left behind.
+            Every other app optimises for how long you stay. None of them measure what you leave with.
           </p>
         </motion.div>
 
@@ -75,7 +90,7 @@ const Problem: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-20 italic font-body"
         >
-          What if you had a companion who remembered everything—and helped you see what it all means?
+          What if there was a journal that succeeded only when you did — not when you stayed longer?
         </motion.p>
       </div>
     </section>
