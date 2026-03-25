@@ -4,7 +4,16 @@
  * Benefits section for Zenith Journal landing page.
  * Quiet Confidence redesign: Simple text blocks, ember accent, no glassmorphism.
  *
- * Related: ZenithLanding.tsx
+ * Value-centric pivot (Mar 2026): Section header and benefit descriptions updated to
+ * emphasise time-efficiency and value-per-minute. The "Just Talk" benefit now leads
+ * with the 4× speed advantage as a concrete value prop, not just a feature.
+ *
+ * Anti-engagement pivot (Mar 2026): Section header and benefit descriptions updated
+ * with explicit contrast language — "not to log your time, but to return value on it".
+ * Each benefit now names the anti-engagement stance: speed > blank-page scroll traps,
+ * automatic synthesis > hours of scattered effort, honest reflection > generic advice.
+ *
+ * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
 import React from 'react';
@@ -15,17 +24,17 @@ const Benefits: React.FC = () => {
     {
       title: 'Just Talk',
       description:
-        "No blank page anxiety. Speak your thoughts and Zenith transcribes them instantly. Talk four times faster than you type—your stream of consciousness becomes a searchable record.",
+        "Talk four times faster than you type — so every minute returns four times the insight. No blank page. No scroll trap. No wasted session. Just clarity at the speed of thought, the moment you need it.",
     },
     {
       title: 'Your Life, Organized',
       description:
-        'Zenith reads between the lines. It automatically surfaces your goals, dreams, and recurring themes—building a picture of who you are and who you\'re becoming.',
+        'Zenith reads between the lines and automatically surfaces your goals, dreams, and recurring themes. Five minutes with Zenith delivers what hours of scattered note-taking — and endless app-switching — never could.',
     },
     {
       title: 'A Friend Who Remembers',
       description:
-        'Weekly insights from an AI that knows your story. Not generic advice—reflections drawn from your own words, your own patterns, your own journey.',
+        'Weekly insights drawn from your own words, your own patterns, your own journey. Not generic advice engineered to keep you coming back — real reflection designed to send you forward.',
     },
   ];
 
@@ -46,12 +55,13 @@ const Benefits: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-cream mb-4 tracking-tight">
-            The journal that{' '}
-            <span className="text-ember">understands you</span>
+            Built to{' '}
+            <span className="text-ember">return value.</span>
+            <br />
+            Not to consume it.
           </h2>
           <p className="text-stone text-lg max-w-2xl mx-auto font-body">
-            Zenith is an AI companion that listens, remembers, and helps you
-            see the bigger picture of your life.
+            Zenith is an AI companion designed with one constraint: every session must leave you better off than when you arrived. Not more data to scroll through. Real clarity you can act on.
           </p>
         </motion.div>
 
