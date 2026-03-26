@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.4 }}
           className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-stone text-sm"
         >
-          <span>Value Delivered, Not Time Spent</span>
+          <span>Zero Cloud Exposure</span>
           <span className="hidden sm:inline text-stone/30">|</span>
           <span>AI That Remembers You</span>
           <span className="hidden sm:inline text-stone/30">|</span>
