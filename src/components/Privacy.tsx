@@ -8,6 +8,10 @@
  * a feature checkbox. Mental health data deserves the same protection as medical data.
  * Informed by Reddit r/Futurology discourse on data practices as a long-term health risk.
  *
+ * Cloud vulnerability pivot (Mar 2026): Added breach/CVE messaging to contrast
+ * Zenith's zero-cloud architecture against cloud database vulnerabilities.
+ * Source: Reddit r/docker breach thread.
+ *
  * Related: ZenithLanding.tsx
  */
 
@@ -61,6 +65,10 @@ const Privacy: React.FC = () => {
                 <span className="text-stone/40 mt-1">-</span>
                 <span>Your vulnerability monetised, not protected</span>
               </li>
+              <li className="flex items-start gap-3 text-stone">
+                <span className="text-stone/40 mt-1">-</span>
+                <span>One cloud breach away from your deepest thoughts going public</span>
+              </li>
             </ul>
           </motion.div>
 
@@ -90,6 +98,12 @@ const Privacy: React.FC = () => {
                 <span className="text-ember mt-1">+</span>
                 <span>
                   <strong>You are the customer — and your wellbeing is the product</strong>
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-cream">
+                <span className="text-ember mt-1">+</span>
+                <span>
+                  <strong>No cloud. No breach risk. Zero attack surface.</strong>
                 </span>
               </li>
             </ul>
