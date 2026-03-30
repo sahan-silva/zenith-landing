@@ -13,6 +13,12 @@
  * calls out engagement-maximizing design by name — "designed to keep you scrolling,
  * not to help you grow" — to resonate with users who recognise the pattern.
  *
+ * Emotional processing pivot (Mar 2026): Added pain point naming the HOW gap —
+ * "Everyone says 'journal your feelings.' No one says how." Placed between the
+ * first and second existing pain points where it fits the narrative flow from
+ * 'nowhere to go' → 'no instruction' → 'scattered' → 'no names for patterns'.
+ * Source: r/Journaling — generic advice without structure is the core frustration.
+ *
  * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
@@ -24,6 +30,10 @@ const Problem: React.FC = () => {
     {
       emphasis: 'You have goals scattered across a dozen apps...',
       detail: 'Tasks in one place, notes in another, voice memos you never listen to again. Fragmentation is the enemy of self-knowledge.',
+    },
+    {
+      emphasis: 'Everyone says "journal your feelings." No one says how.',
+      detail: 'Open a blank page and stare. Write something vague. Feel no different. Generic advice treats the symptom — the blank page — not the gap: you have no protocol for actually processing what\'s weighing on you.',
     },
     {
       emphasis: 'You sense patterns in your life but can\'t quite name them...',
