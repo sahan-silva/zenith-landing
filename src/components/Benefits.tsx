@@ -13,6 +13,12 @@
  * Each benefit now names the anti-engagement stance: speed > blank-page scroll traps,
  * automatic synthesis > hours of scattered effort, honest reflection > generic advice.
  *
+ * Emotional processing pivot (Mar 2026): "A Friend Who Remembers" reframed as
+ * "Your Emotional Processing Protocol" — names the concrete HOW steps (talk, AI
+ * identifies patterns, weekly reflection surfaces what's really going on, leave with
+ * clarity) that generic journaling advice consistently fails to provide.
+ * Source: r/Journaling — users want structure, not blank-page platitudes.
+ *
  * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
@@ -32,9 +38,9 @@ const Benefits: React.FC = () => {
         'Zenith reads between the lines and automatically surfaces your goals, dreams, and recurring themes. Five minutes with Zenith delivers what hours of scattered note-taking — and endless app-switching — never could.',
     },
     {
-      title: 'A Friend Who Remembers',
+      title: 'Your Emotional Processing Protocol',
       description:
-        'Weekly insights drawn from your own words, your own patterns, your own journey. Not generic advice engineered to keep you coming back — real reflection designed to send you forward.',
+        'Talk through what\'s weighing on you. Zenith\'s AI identifies emotional patterns across your entries. Your weekly reflection surfaces what\'s really going on beneath the surface. You leave with actionable clarity — not a blank page and a vague suggestion to "journal your feelings."',
     },
   ];
 

@@ -12,6 +12,11 @@
  * frustration with engagement-trap apps (time-spent metrics, streak anxiety, no real
  * growth). Closing statement updated to reinforce the value-delivered contract.
  *
+ * Emotional processing pivot (Mar 2026): Added checklist item for users who want a
+ * structured way to process emotions — contrasting against the blank-page + generic
+ * advice pattern that Reddit surfaced as the core HOW gap in journaling.
+ * Placed adjacent to the "leave lighter" theme (succeeding when you grow).
+ *
  * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
@@ -23,6 +28,7 @@ const WhoItsFor: React.FC = () => {
     'You have thoughts worth remembering — but they slip away before you can act on them',
     'You sense patterns in your life but struggle to name them',
     "You're done with apps that count your time spent and call it progress",
+    "You want a structured way to process emotions — not just a blank page and generic advice to 'journal your feelings'",
     "You want a tool that succeeds when you grow — not when you're addicted",
     'You want clarity about who you are and where you\'re going',
   ];
