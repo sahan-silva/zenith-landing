@@ -16,6 +16,10 @@
  * "not time logged" and "value delivered" is now the core promise — surfaced in both
  * the headline and subhead to establish the anti-engagement positioning immediately.
  *
+ * No Subscription badge added (Mar 2026): "No AI Subscription" trust badge added after
+ * "Privacy-First Wellness" to surface the cost-freedom advantage at first impression.
+ * Source: Reddit r/artificial AI subscription exhaustion signals.
+ *
  * Related: EmailForm.tsx, ZenithLanding.tsx
  */
 
@@ -84,6 +88,8 @@ const Hero: React.FC = () => {
           <span>AI That Remembers You</span>
           <span className="hidden sm:inline text-stone/30">|</span>
           <span>Privacy-First Wellness</span>
+          <span className="hidden sm:inline text-stone/30">|</span>
+          <span>No AI Subscription</span>
         </motion.div>
       </div>
     </section>

@@ -8,7 +8,10 @@
  * on the value-per-minute contract. "Begin your story" replaced with the direct
  * value promise: the CTA now names what you walk away with, not just what you join.
  *
- * Related: EmailForm.tsx, ZenithLanding.tsx, AntiEngagementManifesto.tsx
+ * No Subscription incentive added (Mar 2026): AI cost-freedom reinforces the no-subscription
+ * promise at the point of sign-up — closes the narrative opened in NoSubscription section.
+ *
+ * Related: EmailForm.tsx, ZenithLanding.tsx, AntiEngagementManifesto.tsx, NoSubscription.tsx
  */
 
 import React from 'react';
@@ -22,6 +25,8 @@ const FinalCTA: React.FC = () => {
     'Founding member pricing',
     'Be first to experience a journal that measures what you leave with',
     'More clarity per minute than any app you\'ve tried',
+    // Cost-freedom: AI on-device means no subscription, no usage billing — ever
+    'AI insights included — no subscription, ever',
   ];
 
   // Single fade-in animation (Quiet Confidence constraint)
