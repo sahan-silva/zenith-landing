@@ -17,7 +17,10 @@
  * advice pattern that Reddit surfaced as the core HOW gap in journaling.
  * Placed adjacent to the "leave lighter" theme (succeeding when you grow).
  *
- * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
+ * Comprehension gap pivot (Mar 2026): Added checklist item for AI-heavy founders who
+ * build faster than they understand — the vibe coding comprehension gap (Reddit intel).
+ *
+ * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx, ComprehensionLayer.tsx
  */
 
 import React from 'react';
@@ -31,6 +34,8 @@ const WhoItsFor: React.FC = () => {
     "You want a structured way to process emotions — not just a blank page and generic advice to 'journal your feelings'",
     "You want a tool that succeeds when you grow — not when you're addicted",
     'You want clarity about who you are and where you\'re going',
+    // Vibe coding comprehension gap: AI-heavy founders who ship faster than they understand (Mar 2026)
+    "You're shipping features with AI but losing track of why you're building them",
   ];
 
   // Single fade-in animation (Quiet Confidence constraint)
