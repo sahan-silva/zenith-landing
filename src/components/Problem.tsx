@@ -13,6 +13,11 @@
  * calls out engagement-maximizing design by name — "designed to keep you scrolling,
  * not to help you grow" — to resonate with users who recognise the pattern.
  *
+ * Emotional lightness pivot (Mar 2026): Added a pain point naming emotional heaviness
+ * directly — journaling should lift the weight, not add to it. Source: Reddit
+ * r/Journaling where users describe the friction of blank-page journaling as adding
+ * effort without releasing the weight they came to shed.
+ *
  * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
@@ -21,6 +26,11 @@ import { motion } from 'framer-motion';
 
 const Problem: React.FC = () => {
   const painPoints = [
+    {
+      emphasis: 'You carry thoughts that have nowhere to go...',
+      // Emotional heaviness named as a pain point: journaling should lift weight, not add to it
+      detail: 'The mental load builds — unprocessed feelings, half-formed plans, things you need to say to yourself. It sits heavy. And the blank page makes it heavier.',
+    },
     {
       emphasis: 'You have goals scattered across a dozen apps...',
       detail: 'Tasks in one place, notes in another, voice memos you never listen to again. Fragmentation is the enemy of self-knowledge.',
@@ -56,12 +66,12 @@ const Problem: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
-            You deserve more
+            Reflecting should
             <br />
-            than time logged.
+            lift the weight.
           </h2>
           <p className="font-display text-2xl sm:text-3xl text-stone">
-            Every other app optimises for how long you stay. None of them measure what you leave with.
+            Not add to it. But most apps are designed to keep you in — not to send you away lighter.
           </p>
         </motion.div>
 
@@ -90,7 +100,7 @@ const Problem: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-20 italic font-body"
         >
-          What if there was a journal that succeeded only when you did — not when you stayed longer?
+          What if there was a journal that only succeeded when you left lighter than you arrived?
         </motion.p>
       </div>
     </section>

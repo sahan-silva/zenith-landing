@@ -16,6 +16,11 @@
  * "not time logged" and "value delivered" is now the core promise — surfaced in both
  * the headline and subhead to establish the anti-engagement positioning immediately.
  *
+ * Emotional lightness pivot (Mar 2026): Primary emotional outcome is now "feel lighter"
+ * — sourced from Reddit r/Journaling where users describe journaling as feeling lighter
+ * and treating it as a date with themselves. The anti-engagement contrast remains; the
+ * lightness framing makes the visceral benefit land before the intellectual argument.
+ *
  * Related: EmailForm.tsx, ZenithLanding.tsx
  */
 
@@ -44,24 +49,24 @@ const Hero: React.FC = () => {
           <span className="text-sm text-stone font-body">Coming Soon</span>
         </motion.div>
 
-        {/* Headline - Value-delivered as primary narrative arc, not just a tagline */}
+        {/* Headline - Emotional lightness as primary outcome; anti-engagement as the why */}
         <motion.h1
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.1 }}
           className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-cream mb-8 leading-tight tracking-tight"
         >
-          Value delivered.
+          Leave lighter
           <br />
-          <span className="text-ember">Not time spent.</span>
+          <span className="text-ember">than you arrived.</span>
         </motion.h1>
 
-        {/* Subhead - Reinforces contrast: most apps harvest attention, Zenith returns clarity */}
+        {/* Subhead - Lightness as the emotional promise; still contrasts with attention-harvesting apps */}
         <motion.p
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.2 }}
           className="text-lg sm:text-xl text-stone mb-12 max-w-2xl mx-auto leading-relaxed font-body"
         >
-          Most apps measure how long you stay. Zenith measures what you leave with. Just talk — every minute of reflection surfaces the goals, patterns, and clarity that actually move your life forward.
+          Most apps measure how long you stay. Zenith measures how light you feel when you go. Just talk — every session lifts the weight of unprocessed thoughts and leaves you with the clarity that actually moves your life forward.
         </motion.p>
 
         {/* Email Form */}

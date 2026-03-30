@@ -13,6 +13,10 @@
  * Each benefit now names the anti-engagement stance: speed > blank-page scroll traps,
  * automatic synthesis > hours of scattered effort, honest reflection > generic advice.
  *
+ * Emotional lightness pivot (Mar 2026): Each benefit now closes with the physical/emotional
+ * sensation of relief — "the weight lift", "walk away lighter", "send you forward" — framing
+ * the product as a date with yourself that you leave feeling better for having kept.
+ *
  * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
@@ -23,18 +27,21 @@ const Benefits: React.FC = () => {
   const benefits = [
     {
       title: 'Just Talk',
+      // Lightness lens: talking is faster AND lifts the weight — the physical relief of externalising thoughts
       description:
-        "Talk four times faster than you type — so every minute returns four times the insight. No blank page. No scroll trap. No wasted session. Just clarity at the speed of thought, the moment you need it.",
+        "Talk four times faster than you type — and feel the weight lift as you do. No blank page. No scroll trap. No session that ends heavier than it started. Just clarity at the speed of thought, the moment you need it.",
     },
     {
       title: 'Your Life, Organized',
+      // Lightness lens: the exhaustion of fragmentation is lifted when Zenith does the synthesis for you
       description:
-        'Zenith reads between the lines and automatically surfaces your goals, dreams, and recurring themes. Five minutes with Zenith delivers what hours of scattered note-taking — and endless app-switching — never could.',
+        'Zenith reads between the lines and automatically surfaces your goals, dreams, and recurring themes. Walk away lighter — without the hours of scattered note-taking, app-switching, or the mental weight of carrying it all yourself.',
     },
     {
       title: 'A Friend Who Remembers',
+      // Lightness lens: being truly heard — by something that remembers — is what makes you feel lighter after
       description:
-        'Weekly insights drawn from your own words, your own patterns, your own journey. Not generic advice engineered to keep you coming back — real reflection designed to send you forward.',
+        'Weekly insights drawn from your own words, your own patterns, your own journey. Not generic advice designed to keep you coming back — real reflection, from a friend who remembers, that sends you forward lighter than you arrived.',
     },
   ];
 
@@ -56,12 +63,12 @@ const Benefits: React.FC = () => {
         >
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-cream mb-4 tracking-tight">
             Built to{' '}
-            <span className="text-ember">return value.</span>
+            <span className="text-ember">leave you lighter.</span>
             <br />
-            Not to consume it.
+            Not to hold you longer.
           </h2>
           <p className="text-stone text-lg max-w-2xl mx-auto font-body">
-            Zenith is an AI companion designed with one constraint: every session must leave you better off than when you arrived. Not more data to scroll through. Real clarity you can act on.
+            Zenith is an AI companion designed with one constraint: every session must leave you lighter than when you arrived. Not more data to scroll through — the actual weight lifted. Real clarity you can act on.
           </p>
         </motion.div>
 
