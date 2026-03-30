@@ -8,6 +8,10 @@
  * on the value-per-minute contract. "Begin your story" replaced with the direct
  * value promise: the CTA now names what you walk away with, not just what you join.
  *
+ * Emotional lightness pivot (Mar 2026): Headline and subtitle now close on the
+ * lightness promise — "Leave lighter than you arrived" is the page's final emotional
+ * beat, echoing the Hero and landing the full narrative arc.
+ *
  * Related: EmailForm.tsx, ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
@@ -20,7 +24,8 @@ const FinalCTA: React.FC = () => {
     'Early access to the beta',
     'Shape the features we build — we only ship what earns its place',
     'Founding member pricing',
-    'Be first to experience a journal that measures what you leave with',
+    // Lightness as the product promise — what you take away from every session
+    'Be first to experience a journal where you always leave lighter',
     'More clarity per minute than any app you\'ve tried',
   ];
 
@@ -40,12 +45,13 @@ const FinalCTA: React.FC = () => {
           viewport={{ once: true, margin: '-100px' }}
           className="text-center mb-12"
         >
+          {/* Headline closes the full narrative arc opened in Hero: "Leave lighter than you arrived" */}
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
-            Leave every session{' '}
-            <span className="text-ember">better off.</span>
+            Leave lighter{' '}
+            <span className="text-ember">than you arrived.</span>
           </h2>
           <p className="text-stone text-lg max-w-xl mx-auto font-body">
-            Join the waitlist. Zenith measures what you walk away with — not how long you stayed.
+            Join the waitlist. Every Zenith session lifts the weight — and measures what you walk away with, not how long you stayed.
           </p>
         </motion.div>
 

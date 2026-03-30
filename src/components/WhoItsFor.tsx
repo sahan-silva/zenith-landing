@@ -12,6 +12,10 @@
  * frustration with engagement-trap apps (time-spent metrics, streak anxiety, no real
  * growth). Closing statement updated to reinforce the value-delivered contract.
  *
+ * Emotional lightness pivot (Mar 2026): Added "date with yourself" language and the
+ * desire to feel lighter after reflecting — sourced from Reddit r/Journaling where
+ * users describe their journaling practice in exactly these terms.
+ *
  * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
@@ -20,11 +24,14 @@ import { motion } from 'framer-motion';
 
 const WhoItsFor: React.FC = () => {
   const checklistItems = [
+    // "Date with yourself" language — from Reddit r/Journaling; treats reflection as self-care, not productivity
+    'You want a quiet date with yourself — time to think, not to be harvested',
     'You have thoughts worth remembering — but they slip away before you can act on them',
     'You sense patterns in your life but struggle to name them',
+    // Lightness as the desired outcome of reflection — the feeling after is the product
+    "You want to leave your journaling sessions feeling lighter, not heavier",
     "You're done with apps that count your time spent and call it progress",
     "You want a tool that succeeds when you grow — not when you're addicted",
-    'You want clarity about who you are and where you\'re going',
   ];
 
   // Single fade-in animation (Quiet Confidence constraint)
@@ -47,7 +54,7 @@ const WhoItsFor: React.FC = () => {
             Is this <span className="text-ember">you</span>?
           </h2>
           <p className="text-stone text-lg font-body">
-            Zenith is for people who measure self-investment by what they gain — not by how long they stay.
+            Zenith is for people who want to leave reflection feeling lighter — not people who want to log another streak.
           </p>
         </motion.div>
 
@@ -76,7 +83,7 @@ const WhoItsFor: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-16 font-body"
         >
-          If any of these land, Zenith was built to give you back more than you put in.
+          If any of these land, Zenith was built so you leave every session lighter than you arrived.
         </motion.p>
       </div>
     </section>
