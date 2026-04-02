@@ -4,20 +4,12 @@
  * Problem section for Zenith Journal landing page.
  * Quiet Confidence redesign: Typography-driven hierarchy, warm stone accents.
  *
- * Value-centric pivot (Mar 2026): Added attention-harvesting pain point to connect
- * with users seeking apps that give back as much as they take. The subheader now
- * frames self-awareness as something apps should respect, not compete with.
- *
- * Anti-engagement pivot (Mar 2026): Pain points now explicitly name the time-spent
- * vs value-delivered contrast drawn from Reddit sentiment. The third pain point
- * calls out engagement-maximizing design by name — "designed to keep you scrolling,
- * not to help you grow" — to resonate with users who recognise the pattern.
- *
- * Emotional processing pivot (Mar 2026): Added pain point naming the HOW gap —
- * "Everyone says 'journal your feelings.' No one says how." Placed between the
- * first and second existing pain points where it fits the narrative flow from
- * 'nowhere to go' → 'no instruction' → 'scattered' → 'no names for patterns'.
- * Source: r/Journaling — generic advice without structure is the core frustration.
+ * Midnight Clarity alignment (Apr 2026): Leading pain point now names the core
+ * experience from the Hero — late-night clarity that vanishes by morning. The
+ * cortisol insight (r/productivity, 824 upvotes) validates that evening mental
+ * clarity is biochemically real but biologically fleeting. Pain points flow:
+ * clarity lost → no structure → scattered → engagement-maximizing apps → nothing sticks.
+ * Source: Reddit r/productivity — https://www.reddit.com/r/productivity/comments/1s1r1kn/
  *
  * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
@@ -28,8 +20,8 @@ import { motion } from 'framer-motion';
 const Problem: React.FC = () => {
   const painPoints = [
     {
-      emphasis: 'You have goals scattered across a dozen apps...',
-      detail: 'Tasks in one place, notes in another, voice memos you never listen to again. Fragmentation is the enemy of self-knowledge.',
+      emphasis: 'At 2 AM, everything makes sense. By 8 AM, it\'s gone.',
+      detail: 'Your brain is quieter at night — cortisol drops, stress fades, and suddenly you see your life with startling clarity. But you wake up and it\'s just... gone. No capture, no follow-through.',
     },
     {
       emphasis: 'Everyone says "journal your feelings." No one says how.',
@@ -45,7 +37,7 @@ const Problem: React.FC = () => {
     },
     {
       emphasis: 'And when you do reflect, nothing sticks...',
-      detail: 'Insights fade. Intentions get lost. You\'re left wondering: what was that breakthrough I had last month?',
+      detail: 'Insights fade. Intentions get lost. You\'re left wondering: what was that breakthrough I had last Tuesday night?',
     },
   ];
 
@@ -66,12 +58,12 @@ const Problem: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
-            You deserve more
+            Your best thinking happens
             <br />
-            than time logged.
+            at the worst time.
           </h2>
           <p className="font-display text-2xl sm:text-3xl text-stone">
-            Every other app optimises for how long you stay. None of them measure what you leave with.
+            Late-night clarity is real. But without a system to capture it, it vanishes by morning.
           </p>
         </motion.div>
 
@@ -100,7 +92,7 @@ const Problem: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-20 italic font-body"
         >
-          What if there was a journal that succeeded only when you did — not when you stayed longer?
+          What if your late-night clarity didn't have to disappear?
         </motion.p>
       </div>
     </section>

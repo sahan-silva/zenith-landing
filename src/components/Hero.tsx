@@ -4,28 +4,14 @@
  * Hero section for Zenith Journal landing page.
  * Quiet Confidence redesign: Typography-first, warm minimalism, no gradients/orbs.
  *
- * Trust badge updated (Mar 2026): "100% Private" → "Privacy-First Wellness" to reinforce
- * the wellness-as-privacy positioning running through the Privacy section below.
- *
- * Value-centric pivot (Mar 2026): Subheading and first trust badge updated to position
- * Zenith against attention-harvesting apps. Every minute with Zenith should deliver
- * clarity — not just time logged. Source: Reddit r/Futurology user signals.
- *
- * Anti-engagement pivot (Mar 2026): Headline restructured to lead with value-delivered
- * as the primary narrative arc, not just a subhead qualifier. The contrast between
- * "not time logged" and "value delivered" is now the core promise — surfaced in both
- * the headline and subhead to establish the anti-engagement positioning immediately.
- *
- * No Subscription badge added (Mar 2026): "No AI Subscription" trust badge added after
- * "Privacy-First Wellness" to surface the cost-freedom advantage at first impression.
- * Source: Reddit r/artificial AI subscription exhaustion signals.
- *
- * AI Weekly Reflection pivot (Apr 2026): Headline and subhead updated to lead with Zenith's
- * primary moat — AI weekly reflection that learns you over time. A 128-engineer competitor
- * commoditized simplicity/anti-complexity positioning (r/indiehackers). Longitudinal AI
- * learning is the differentiator no competitor can replicate quickly. Anti-engagement stance
- * retained as supporting message, not the lead.
- * Source: Reddit r/indiehackers competitor intelligence.
+ * Midnight Clarity pivot (Apr 2026): Headline and subhead now lead with the evening
+ * clarity capture angle — cortisol drops at night make thoughts feel clear, Zenith
+ * captures that clarity and transforms it into morning actions via overnight AI
+ * processing. Longitudinal AI learning retained as supporting proof in subhead.
+ * Source: Reddit r/productivity (824 upvotes, 42 comments).
+ * Thread: https://www.reddit.com/r/productivity/comments/1s1r1kn/
+ * Key insight: "cortisol dropping at night... brain mistakes that for having things
+ * figured out" — Zenith turns that fleeting clarity into durable action.
  *
  * Related: EmailForm.tsx, ZenithLanding.tsx
  */
@@ -55,24 +41,24 @@ const Hero: React.FC = () => {
           <span className="text-sm text-stone font-body">Coming Soon</span>
         </motion.div>
 
-        {/* Headline - AI weekly reflection as primary moat; anti-engagement as supporting arc */}
+        {/* Headline - Midnight clarity capture as the lead hook */}
         <motion.h1
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.1 }}
           className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-cream mb-8 leading-tight tracking-tight"
         >
-          The AI that learns you.
+          Capture midnight clarity.
           <br />
-          <span className="text-ember">Weekly. Over time.</span>
+          <span className="text-ember">Act on it tomorrow.</span>
         </motion.h1>
 
-        {/* Subhead - Leads with longitudinal AI learning; closes with anti-engagement positioning */}
+        {/* Subhead - Evening capture → overnight AI → morning actions; closes with longitudinal learning moat */}
         <motion.p
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.2 }}
           className="text-lg sm:text-xl text-stone mb-12 max-w-2xl mx-auto leading-relaxed font-body"
         >
-          Every journal entry teaches Zenith something about you. Every week, it surfaces the patterns, goals, and clarity that only emerge over time — not a generic summary, but a reflection built from months of knowing you. No other journal does this.
+          Late at night, everything feels clear — but by morning, it's gone. Zenith captures your evening intentions, processes them overnight, and wakes you with 1–3 specific actions. Over time, it learns your patterns and turns fleeting clarity into lasting change.
         </motion.p>
 
         {/* Email Form */}
@@ -90,13 +76,13 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.4 }}
           className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-stone text-sm"
         >
-          <span>Zero Cloud Exposure</span>
+          <span>Evening Capture → Morning Actions</span>
           <span className="hidden sm:inline text-stone/30">|</span>
-          <span>AI That Remembers You</span>
+          <span>AI That Learns You Over Time</span>
           <span className="hidden sm:inline text-stone/30">|</span>
-          <span>Privacy-First Wellness</span>
+          <span>Privacy-First</span>
           <span className="hidden sm:inline text-stone/30">|</span>
-          <span>No AI Subscription</span>
+          <span>No Subscription</span>
         </motion.div>
       </div>
     </section>
