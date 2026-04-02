@@ -20,6 +20,13 @@
  * "Privacy-First Wellness" to surface the cost-freedom advantage at first impression.
  * Source: Reddit r/artificial AI subscription exhaustion signals.
  *
+ * AI Weekly Reflection pivot (Apr 2026): Headline and subhead updated to lead with Zenith's
+ * primary moat — AI weekly reflection that learns you over time. A 128-engineer competitor
+ * commoditized simplicity/anti-complexity positioning (r/indiehackers). Longitudinal AI
+ * learning is the differentiator no competitor can replicate quickly. Anti-engagement stance
+ * retained as supporting message, not the lead.
+ * Source: Reddit r/indiehackers competitor intelligence.
+ *
  * Related: EmailForm.tsx, ZenithLanding.tsx
  */
 
@@ -48,24 +55,24 @@ const Hero: React.FC = () => {
           <span className="text-sm text-stone font-body">Coming Soon</span>
         </motion.div>
 
-        {/* Headline - Value-delivered as primary narrative arc, not just a tagline */}
+        {/* Headline - AI weekly reflection as primary moat; anti-engagement as supporting arc */}
         <motion.h1
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.1 }}
           className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-cream mb-8 leading-tight tracking-tight"
         >
-          Value delivered.
+          The AI that learns you.
           <br />
-          <span className="text-ember">Not time spent.</span>
+          <span className="text-ember">Weekly. Over time.</span>
         </motion.h1>
 
-        {/* Subhead - Reinforces contrast: most apps harvest attention, Zenith returns clarity */}
+        {/* Subhead - Leads with longitudinal AI learning; closes with anti-engagement positioning */}
         <motion.p
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.2 }}
           className="text-lg sm:text-xl text-stone mb-12 max-w-2xl mx-auto leading-relaxed font-body"
         >
-          Most apps measure how long you stay. Zenith measures what you leave with. Just talk — every minute of reflection surfaces the goals, patterns, and clarity that actually move your life forward.
+          Every journal entry teaches Zenith something about you. Every week, it surfaces the patterns, goals, and clarity that only emerge over time — not a generic summary, but a reflection built from months of knowing you. No other journal does this.
         </motion.p>
 
         {/* Email Form */}
