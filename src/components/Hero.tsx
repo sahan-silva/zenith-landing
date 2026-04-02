@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.2 }}
           className="text-lg sm:text-xl text-stone mb-12 max-w-2xl mx-auto leading-relaxed font-body"
         >
-          Late at night, everything feels clear — but by morning, it's gone. Zenith captures your evening intentions, processes them overnight, and wakes you with 1–3 specific actions. Over time, it learns your patterns and turns fleeting clarity into lasting change.
+          Late at night, everything feels clear — but by morning, it's gone. Zenith captures your evening intentions, processes them overnight, and delivers 1–3 specific actions by morning. Over time, it learns your patterns and turns fleeting clarity into lasting change.
         </motion.p>
 
         {/* Email Form */}

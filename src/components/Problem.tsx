@@ -21,7 +21,7 @@ const Problem: React.FC = () => {
   const painPoints = [
     {
       emphasis: 'At 2 AM, everything makes sense. By 8 AM, it\'s gone.',
-      detail: 'Your brain is quieter at night — cortisol drops, stress fades, and suddenly you see your life with startling clarity. But you wake up and it\'s just... gone. No capture, no follow-through.',
+      detail: 'Your brain is quieter at night — the stress of the day fades, and suddenly you see your life with startling clarity. But you wake up and it\'s just... gone. No capture, no follow-through.',
     },
     {
       emphasis: 'Everyone says "journal your feelings." No one says how.',
