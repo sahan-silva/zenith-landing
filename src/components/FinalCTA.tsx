@@ -4,12 +4,10 @@
  * Final Call-to-Action section for Zenith Journal landing page.
  * Quiet Confidence redesign: Simple incentive list, no animated orbs.
  *
- * Anti-engagement pivot (Mar 2026): Headline and incentive list updated to close
- * on the value-per-minute contract. "Begin your story" replaced with the direct
- * value promise: the CTA now names what you walk away with, not just what you join.
- *
- * No Subscription incentive added (Mar 2026): AI cost-freedom reinforces the no-subscription
- * promise at the point of sign-up — closes the narrative opened in NoSubscription section.
+ * Midnight Clarity alignment (Apr 2026): CTA headline and incentive list now close
+ * the narrative arc opened in Hero — evening clarity captured, morning actions delivered.
+ * Incentive list surfaces the overnight AI processing as the tangible mechanism.
+ * Source: Reddit r/productivity midnight clarity thread (824 upvotes).
  *
  * Related: EmailForm.tsx, ZenithLanding.tsx, AntiEngagementManifesto.tsx, NoSubscription.tsx
  */
@@ -23,8 +21,8 @@ const FinalCTA: React.FC = () => {
     'Early access to the beta',
     'Shape the features we build — we only ship what earns its place',
     'Founding member pricing',
-    'Be first to experience a journal that measures what you leave with',
-    'More clarity per minute than any app you\'ve tried',
+    'Be first to wake up to actions born from last night\'s clarity',
+    'Overnight AI that turns evening thoughts into morning momentum',
     // Cost-freedom: AI on-device means no subscription, no usage billing — ever
     'AI insights included — no subscription, ever',
   ];
@@ -46,11 +44,11 @@ const FinalCTA: React.FC = () => {
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
-            Leave every session{' '}
-            <span className="text-ember">better off.</span>
+            Tonight's clarity.{' '}
+            <span className="text-ember">Tomorrow's action.</span>
           </h2>
           <p className="text-stone text-lg max-w-xl mx-auto font-body">
-            Join the waitlist. Zenith measures what you walk away with — not how long you stayed.
+            Join the waitlist. Zenith captures what you think at night and turns it into what you do in the morning.
           </p>
         </motion.div>
 
