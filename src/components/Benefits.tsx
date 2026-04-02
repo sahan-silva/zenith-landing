@@ -19,6 +19,12 @@
  * clarity) that generic journaling advice consistently fails to provide.
  * Source: r/Journaling — users want structure, not blank-page platitudes.
  *
+ * AI moat pivot (Apr 2026): Third benefit strengthened to centre Zenith's primary moat —
+ * longitudinal AI learning across weeks and months. Simplicity is now table stakes
+ * (r/indiehackers 128-engineer competitor). The section header has been updated to anchor
+ * the AI weekly reflection moat as the lead. No competitor builds a model of you over time.
+ * Source: Reddit r/indiehackers competitor intelligence.
+ *
  * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
 
@@ -38,9 +44,9 @@ const Benefits: React.FC = () => {
         'Zenith reads between the lines and automatically surfaces your goals, dreams, and recurring themes. Five minutes with Zenith delivers what hours of scattered note-taking — and endless app-switching — never could.',
     },
     {
-      title: 'Your Emotional Processing Protocol',
+      title: 'An AI That Learns You — Week After Week',
       description:
-        'Talk through what\'s weighing on you. Zenith\'s AI identifies emotional patterns across your entries. Your weekly reflection surfaces what\'s really going on beneath the surface. You leave with actionable clarity — not a blank page and a vague suggestion to "journal your feelings."',
+        'Every entry deepens Zenith\'s model of you. Your weekly AI reflection doesn\'t reset — it builds. After weeks, it identifies emotional patterns your journal can\'t surface alone. After months, it knows what actually moves you forward. No other journal builds this kind of understanding over time.',
     },
   ];
 
@@ -61,13 +67,11 @@ const Benefits: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-cream mb-4 tracking-tight">
-            Built to{' '}
-            <span className="text-ember">return value.</span>
-            <br />
-            Not to consume it.
+            The only journal that{' '}
+            <span className="text-ember">builds on itself.</span>
           </h2>
           <p className="text-stone text-lg max-w-2xl mx-auto font-body">
-            Zenith is an AI companion designed with one constraint: every session must leave you better off than when you arrived. Not more data to scroll through. Real clarity you can act on.
+            Zenith's AI weekly reflection gets sharper the longer you use it. Most tools reset. Zenith remembers — and returns clarity no single session could surface on its own.
           </p>
         </motion.div>
 
