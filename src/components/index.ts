@@ -7,6 +7,7 @@
 export { default as ZenithLanding } from './ZenithLanding';
 export { default as Hero } from './Hero';
 export { default as Problem } from './Problem';
+export { default as AntiSetup } from './AntiSetup';
 export { default as Benefits } from './Benefits';
 export { default as Privacy } from './Privacy';
 export { default as NoSubscription } from './NoSubscription';
