@@ -4,12 +4,11 @@
  * Problem section for Zenith Journal landing page.
  * Quiet Confidence redesign: Typography-driven hierarchy, warm stone accents.
  *
- * Midnight Clarity alignment (Apr 2026): Leading pain point now names the core
- * experience from the Hero — late-night clarity that vanishes by morning. The
- * cortisol insight (r/productivity, 824 upvotes) validates that evening mental
- * clarity is biochemically real but biologically fleeting. Pain points flow:
- * clarity lost → no structure → scattered → engagement-maximizing apps → nothing sticks.
- * Source: Reddit r/productivity — https://www.reddit.com/r/productivity/comments/1s1r1kn/
+ * Pattern Recognition variant (Apr 2026): Pain points reframed around system fatigue,
+ * app fragmentation, and the "everything journal" gap. Reddit intel (2026-04-07):
+ * r/Journaling 157 engagement on "everything journal" search, r/ADHD 76 engagement
+ * on "removing decisions", r/productivity 93 engagement on brain fog epidemic.
+ * Notion task: https://notion.so/334fb7321349811a97c5f89be5437bd1
  *
  * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
@@ -20,24 +19,24 @@ import { motion } from 'framer-motion';
 const Problem: React.FC = () => {
   const painPoints = [
     {
-      emphasis: 'At 2 AM, everything makes sense. By 8 AM, it\'s gone.',
-      detail: 'Your brain is quieter at night — the stress of the day fades, and suddenly you see your life with startling clarity. But you wake up and it\'s just... gone. No capture, no follow-through.',
+      emphasis: 'You\'ve tried five apps. None of them talk to each other.',
+      detail: 'A mood tracker here, a gratitude journal there, a habit app on another screen. Your life is scattered across tools that each capture a fragment but never show you the whole picture.',
     },
     {
-      emphasis: 'Everyone says "journal your feelings." No one says how.',
-      detail: 'Open a blank page and stare. Write something vague. Feel no different. Generic advice treats the symptom — the blank page — not the gap: you have no protocol for actually processing what\'s weighing on you.',
+      emphasis: 'You spend more time maintaining your system than using it.',
+      detail: 'Templates, plugins, workflows, vault organisation. You set up elaborate structures, colour-coded and categorised — then spend more time tending the system than actually reflecting. Removing decisions is underrated.',
     },
     {
-      emphasis: 'You sense patterns in your life but can\'t quite name them...',
-      detail: 'The same feelings keep coming up. The same obstacles. If only you could step back and see it clearly.',
+      emphasis: 'You sense patterns in your life but can\'t quite name them.',
+      detail: 'The same feelings keep surfacing. The same obstacles reappear. You know something is there — a recurring thread — but without a way to step back across weeks and months, you can\'t see it clearly.',
     },
     {
-      emphasis: 'Every other app measures time spent — not value delivered...',
+      emphasis: 'Every other app measures time spent — not value delivered.',
       detail: 'They\'re designed to keep you scrolling, not to help you grow. Their metric is your attention. Yours should be your progress.',
     },
     {
-      emphasis: 'And when you do reflect, nothing sticks...',
-      detail: 'Insights fade. Intentions get lost. You\'re left wondering: what was that breakthrough I had last Tuesday night?',
+      emphasis: 'Your best insights vanish before you can act on them.',
+      detail: 'A breakthrough at 2 AM, a moment of clarity during a walk — gone by the time you could write it down. No capture, no pattern, no follow-through.',
     },
   ];
 
@@ -58,12 +57,12 @@ const Problem: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
-            Your best thinking happens
+            You don't need another app.
             <br />
-            at the worst time.
+            You need one that sees the whole picture.
           </h2>
           <p className="font-display text-2xl sm:text-3xl text-stone">
-            Late-night clarity is real. But without a system to capture it, it vanishes by morning.
+            Journaling tools fragment your life into categories. You need one place for everything — and an AI that connects the dots.
           </p>
         </motion.div>
 
@@ -92,7 +91,7 @@ const Problem: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-20 italic font-body"
         >
-          What if your late-night clarity didn't have to disappear?
+          What if one journal could hold all of it — and show you what you can't see on your own?
         </motion.p>
       </div>
     </section>

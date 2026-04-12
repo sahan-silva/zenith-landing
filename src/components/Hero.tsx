@@ -4,15 +4,15 @@
  * Hero section for Zenith Journal landing page.
  * Quiet Confidence redesign: Typography-first, warm minimalism, no gradients/orbs.
  *
- * Blank-Page Anxiety variant (Apr 2026): Headline leads with the universal journaling
- * barrier — staring at an empty page — and positions Zenith's AI prompts as the fix.
- * Source: Reddit r/Journaling (engagement: 34). Blank-canvas anxiety surfaced as the
- * most resonant pain point; therapist testimonials reinforce that guided prompts lower
- * the barrier to consistent journaling practice.
- * Notion task: https://notion.so/32ffb732134981448122d78e74c36c2d
+ * Pattern Recognition variant (Apr 2026): Headline leads with invisible AI pattern
+ * recognition and "everything journal" positioning. Reddit intel (2026-04-07) surfaced
+ * three converging themes: "everything journal" gap (r/Journaling, 157 engagement),
+ * system fatigue / "removing decisions" (r/ADHD, 76 engagement), and demand for AI
+ * that disappears rather than becoming another tool to manage (r/aiagents).
+ * Notion task: https://notion.so/334fb7321349811a97c5f89be5437bd1
  *
- * Previous variant: "Capture midnight clarity / Act on it tomorrow" (midnight-clarity
- * angle from r/productivity, 824 upvotes). Preserved in git history for rollback.
+ * Previous variant: "Never face a blank page again" (blank-page anxiety angle from
+ * r/Journaling). Preserved in git history for rollback.
  *
  * Related: EmailForm.tsx, ZenithLanding.tsx
  */
@@ -42,24 +42,24 @@ const Hero: React.FC = () => {
           <span className="text-sm text-stone font-body">Coming Soon</span>
         </motion.div>
 
-        {/* Headline - Blank-page anxiety as the lead hook */}
+        {/* Headline - Pattern recognition + everything journal positioning */}
         <motion.h1
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.1 }}
           className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-cream mb-8 leading-tight tracking-tight"
         >
-          Never face a blank page again.
+          Your life has patterns.
           <br />
-          <span className="text-ember">Just start writing.</span>
+          <span className="text-ember">Zenith reveals them.</span>
         </motion.h1>
 
-        {/* Subhead - Blank-page pain → AI prompts solution → longitudinal learning moat */}
+        {/* Subhead - Everything journal + invisible AI + zero decisions */}
         <motion.p
           {...fadeIn}
           transition={{ ...fadeIn.transition, delay: 0.2 }}
           className="text-lg sm:text-xl text-stone mb-12 max-w-2xl mx-auto leading-relaxed font-body"
         >
-          The hardest part of journaling is getting started. Zenith meets you with personalised prompts shaped by your mood, your goals, and what you wrote last time — so you never stare at a blank page wondering what to say. Over time, it learns your patterns and makes reflection effortless.
+          One place for everything — reflection, tracking, goals, life. Just write. Zenith's AI works invisibly across your entries, surfacing emotional patterns, recurring obstacles, and breakthroughs you'd never spot on your own. No setup. No categories. No decisions.
         </motion.p>
 
         {/* Email Form */}
@@ -77,9 +77,9 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.4 }}
           className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-stone text-sm"
         >
-          <span>AI-Powered Prompts</span>
+          <span>Pattern Recognition</span>
           <span className="hidden sm:inline text-stone/30">|</span>
-          <span>Learns Your Patterns</span>
+          <span>Everything Journal</span>
           <span className="hidden sm:inline text-stone/30">|</span>
           <span>Privacy-First</span>
           <span className="hidden sm:inline text-stone/30">|</span>

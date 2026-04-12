@@ -4,18 +4,11 @@
  * Who It's For section for Zenith Journal landing page.
  * Quiet Confidence redesign: Clean checklist, ember accents, no hover effects.
  *
- * Value-centric pivot (Mar 2026): Checklist item updated to name attention-harvesting
- * explicitly — this resonates with users who are consciously rejecting apps that take
- * without giving back. Subtitle layers value-per-minute into the meaning > metrics frame.
- *
- * Anti-engagement pivot (Mar 2026): Checklist sharpened to surface the specific
- * frustration with engagement-trap apps (time-spent metrics, streak anxiety, no real
- * growth). Closing statement updated to reinforce the value-delivered contract.
- *
- * Emotional processing pivot (Mar 2026): Added checklist item for users who want a
- * structured way to process emotions — contrasting against the blank-page + generic
- * advice pattern that Reddit surfaced as the core HOW gap in journaling.
- * Placed adjacent to the "leave lighter" theme (succeeding when you grow).
+ * Pattern Recognition variant (Apr 2026): Checklist reframed for system-fatigued and
+ * ADHD-adjacent users who want zero-decision journaling and invisible AI. Reddit intel
+ * (2026-04-07): "everything journal" gap (r/Journaling, 157 engagement), "removing
+ * decisions is so underrated" (r/ADHD, 76 engagement), app fragmentation pain.
+ * Notion task: https://notion.so/334fb7321349811a97c5f89be5437bd1
  *
  * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
@@ -25,11 +18,11 @@ import { motion } from 'framer-motion';
 
 const WhoItsFor: React.FC = () => {
   const checklistItems = [
-    'You have thoughts worth remembering — but they slip away before you can act on them',
+    'You\'ve tried Notion, Daylio, Day One — and none of them stuck',
+    'You want to just write — no templates, no plugins, no vault organisation',
     'You sense patterns in your life but struggle to name them',
     "You're done with apps that count your time spent and call it progress",
-    "You want a structured way to process emotions — not just a blank page and generic advice to 'journal your feelings'",
-    "You want a tool that succeeds when you grow — not when you're addicted",
+    'You want a tool that removes decisions, not adds them',
     'You want clarity about who you are and where you\'re going',
   ];
 
@@ -53,7 +46,7 @@ const WhoItsFor: React.FC = () => {
             Is this <span className="text-ember">you</span>?
           </h2>
           <p className="text-stone text-lg font-body">
-            Zenith is for people who measure self-investment by what they gain — not by how long they stay.
+            Zenith is for people who are done maintaining systems — and ready for one that maintains itself.
           </p>
         </motion.div>
 
@@ -82,7 +75,7 @@ const WhoItsFor: React.FC = () => {
           viewport={{ once: true }}
           className="text-center text-stone/70 text-lg mt-16 font-body"
         >
-          If any of these land, Zenith was built to give you back more than you put in.
+          If any of these land, Zenith was built for you — one place for everything, zero decisions required.
         </motion.p>
       </div>
     </section>
