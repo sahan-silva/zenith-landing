@@ -4,26 +4,12 @@
  * Benefits section for Zenith Journal landing page.
  * Quiet Confidence redesign: Simple text blocks, ember accent, no glassmorphism.
  *
- * Value-centric pivot (Mar 2026): Section header and benefit descriptions updated to
- * emphasise time-efficiency and value-per-minute. The "Just Talk" benefit now leads
- * with the 4× speed advantage as a concrete value prop, not just a feature.
- *
- * Anti-engagement pivot (Mar 2026): Section header and benefit descriptions updated
- * with explicit contrast language — "not to log your time, but to return value on it".
- * Each benefit now names the anti-engagement stance: speed > blank-page scroll traps,
- * automatic synthesis > hours of scattered effort, honest reflection > generic advice.
- *
- * Emotional processing pivot (Mar 2026): "A Friend Who Remembers" reframed as
- * "Your Emotional Processing Protocol" — names the concrete HOW steps (talk, AI
- * identifies patterns, weekly reflection surfaces what's really going on, leave with
- * clarity) that generic journaling advice consistently fails to provide.
- * Source: r/Journaling — users want structure, not blank-page platitudes.
- *
- * AI moat pivot (Apr 2026): Third benefit strengthened to centre Zenith's primary moat —
- * longitudinal AI learning across weeks and months. Simplicity is now table stakes
- * (r/indiehackers 128-engineer competitor). The section header has been updated to anchor
- * the AI weekly reflection moat as the lead. No competitor builds a model of you over time.
- * Source: Reddit r/indiehackers competitor intelligence.
+ * Pattern Recognition variant (Apr 2026): Benefits reframed around three pillars:
+ * zero-decision entry ("Just Write"), everything-journal convergence ("Your Everything
+ * Journal"), and invisible AI pattern recognition ("Patterns You Can't See"). Reddit
+ * intel (2026-04-07): "everything journal" gap (r/Journaling, 157 engagement),
+ * "removing decisions" (r/ADHD, 76 engagement), invisible AI demand (r/aiagents).
+ * Notion task: https://notion.so/334fb7321349811a97c5f89be5437bd1
  *
  * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
  */
@@ -34,19 +20,19 @@ import { motion } from 'framer-motion';
 const Benefits: React.FC = () => {
   const benefits = [
     {
-      title: 'Just Talk',
+      title: 'Just Write',
       description:
-        "Talk four times faster than you type — so every minute returns four times the insight. No blank page. No scroll trap. No wasted session. Just clarity at the speed of thought, the moment you need it.",
+        'Voice or text — no templates, no folders, no decisions. Zenith adapts to however you think. Four times faster than typing, zero setup required. The AI removes every barrier between you and reflection.',
     },
     {
-      title: 'Your Life, Organized',
+      title: 'Your Everything Journal',
       description:
-        'Zenith reads between the lines and automatically surfaces your goals, dreams, and recurring themes. Five minutes with Zenith delivers what hours of scattered note-taking — and endless app-switching — never could.',
+        'Reflection, mood tracking, goals, dreams, daily logs — one place for all of it. Zenith reads between the lines and organises your life without asking you to categorise anything. No more five apps that don\'t talk to each other.',
     },
     {
-      title: 'An AI That Learns You — Week After Week',
+      title: 'Patterns You Can\'t See',
       description:
-        'Every entry deepens Zenith\'s model of you. Your weekly AI reflection doesn\'t reset — it builds. After weeks, it identifies emotional patterns your journal can\'t surface alone. After months, it knows what actually moves you forward. No other journal builds this kind of understanding over time.',
+        'Zenith\'s AI works invisibly across weeks and months of your entries. It surfaces emotional patterns, recurring obstacles, and hidden correlations — the threads running through your life that no single journal session could reveal. You never interact with the AI. It just shows you what\'s there.',
     },
   ];
 
@@ -67,11 +53,11 @@ const Benefits: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-cream mb-4 tracking-tight">
-            The only journal that{' '}
-            <span className="text-ember">builds on itself.</span>
+            The journal that sees{' '}
+            <span className="text-ember">what you can't.</span>
           </h2>
           <p className="text-stone text-lg max-w-2xl mx-auto font-body">
-            Zenith's AI weekly reflection gets sharper the longer you use it. Most tools reset. Zenith remembers — and returns clarity no single session could surface on its own.
+            One place for everything. Zero decisions. An AI that works invisibly — surfacing the patterns, connections, and breakthroughs hidden in your own words.
           </p>
         </motion.div>
 
