@@ -27,7 +27,7 @@ const Benefits: React.FC = () => {
     {
       title: 'Your Everything Journal',
       description:
-        'Reflection, mood tracking, goals, dreams, daily logs — one place for all of it. Zenith reads between the lines and organises your life without asking you to categorise anything. No more five apps that don\'t talk to each other.',
+        'Reflection, mood tracking, goals, dreams, daily logs — one place for all of it. Zenith reads between the lines and organises your life without asking you to categorise anything. No more five apps that don\'t talk to each other. The modern zibaldone — one notebook for everything, powered by invisible AI that connects every thread.',
     },
     {
       title: 'Patterns You Can\'t See',

@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
           transition={{ ...fadeIn.transition, delay: 0.2 }}
           className="text-lg sm:text-xl text-stone mb-12 max-w-2xl mx-auto leading-relaxed font-body"
         >
-          One place for everything — reflection, tracking, goals, life. Just write. Zenith's AI works invisibly across your entries, surfacing emotional patterns, recurring obstacles, and breakthroughs you'd never spot on your own. No setup. No categories. No decisions.
+          Your everything journal — reflection, tracking, goals, life, all in one place. Just write. Zenith's AI works invisibly across your entries, surfacing emotional patterns, recurring obstacles, and breakthroughs you'd never spot on your own. No setup. No categories. No decisions.
         </motion.p>
 
         {/* Email Form */}
