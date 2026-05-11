@@ -231,25 +231,31 @@ const ZenithPhoneMock: React.FC = () => {
         }
         .zn-date-pill svg { width: 10px; height: 10px; color: var(--zn-stone); }
 
-        /* Proactive insight banner */
+        /* Proactive insight banner — soft amber tint, NO hard border.
+           A 1px stroke at this proximity visually sliced into the mood
+           orbs below; iOS ProactiveInsightsSection uses a glass tint
+           without a stroked rim, so we match that. Extra margin-bottom
+           (20px) gives the mood orb halos room to breathe. */
         .zn-prox {
           display: flex; align-items: center; gap: 10px;
-          padding: 10px 12px; margin-bottom: 14px;
+          padding: 10px 12px; margin-bottom: 20px;
           border-radius: 12px;
           background: rgba(250,194,122,0.10);
-          border: 1px solid rgba(250,194,122,0.22);
         }
         .zn-prox-icon { color: var(--zn-accent); flex: none; }
         .zn-prox-icon svg { width: 16px; height: 16px; }
         .zn-prox-text { font-size: 12.5px; color: var(--zn-secondary);
           line-height: 1.35; }
 
-        /* Mood orb row — MoodSelectorView */
+        /* Mood orb row — MoodSelectorView.
+           Edge-mask removed: it was truncating the first/last labels
+           ("Joyf..." / "Frustr...") which read as broken rather than
+           "scroll for more". The iOS app uses .scrollClipDisabled() so
+           orbs naturally extend to the edge — we approximate with a
+           clean overflow-hidden boundary and explicit padding. */
         .zn-moods {
-          display: flex; gap: 14px; overflow-x: hidden;
-          margin: 0 -18px 16px; padding: 0 18px;
-          -webkit-mask-image: linear-gradient(to right,
-            transparent, black 18px, black calc(100% - 18px), transparent);
+          display: flex; gap: 14px; overflow: hidden;
+          margin: 0 -18px 16px; padding: 8px 14px 4px;
         }
         .zn-mood {
           flex: none; display: flex; flex-direction: column; align-items: center;
