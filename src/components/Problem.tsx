@@ -2,94 +2,111 @@
  * src/components/Problem.tsx
  *
  * Problem section for Zenith Journal landing page.
- * Quiet Confidence redesign: Typography-driven hierarchy, warm stone accents.
  *
- * Pattern Recognition variant (Apr 2026): Pain points reframed around system fatigue,
- * app fragmentation, and the "everything journal" gap. Reddit intel (2026-04-07):
- * r/Journaling 157 engagement on "everything journal" search, r/ADHD 76 engagement
- * on "removing decisions", r/productivity 93 engagement on brain fog epidemic.
- * Notion task: https://notion.so/334fb7321349811a97c5f89be5437bd1
+ * Ports the Burlit problem-section grammar (aramuna-landing-page/components/trademate/
+ * TradieMateProblem.tsx): "The reality" eyebrow → display H2 + italic stone subtitle →
+ * left-border ember pain points → italic stone transition. Consolidates content from
+ * three previous sections (Problem, AntiSetup, AntiAesthetic) into 5 sharpest pain
+ * points per the 2026-05-11 design spec.
  *
- * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
+ * Reddit-intel positioning preserved:
+ *   - r/Journaling 157 engagement on "everything journal" gap (point 1)
+ *   - r/ADHD 76 engagement on "removing decisions" / system maintenance (point 2)
+ *   - Reddit setup-friction intel (point 3) — was AntiSetup template/plugin pain
+ *   - Reddit anti-aesthetic intel 315 upvotes (point 4) — was AntiAesthetic
+ *   - r/aiagents demand for AI that disappears (point 5) — patterns you can't see
+ *
+ * Related: ZenithLanding.tsx, Benefits.tsx, Differentiator.tsx
  */
 
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const fadeUp = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-80px' },
+  transition: { duration: 0.5, ease: 'easeOut' as const },
+};
+
+const painPoints = [
+  {
+    emphasis: 'You\'ve tried five apps. None of them talk to each other.',
+    detail:
+      'A mood tracker here, a gratitude journal there, a habit app on another screen. Your life is scattered across tools that each capture a fragment but never show you the whole picture.',
+  },
+  {
+    emphasis: 'You spend more time maintaining your system than using it.',
+    detail:
+      'Templates, plugins, workflows, vault organisation. You set up elaborate structures, colour-coded and categorised — then spend more time tending the system than actually reflecting.',
+  },
+  {
+    emphasis: 'Templates and plugins replace the writing itself.',
+    detail:
+      'You open a tool to journal. Forty-five minutes later you\'re comparing daily-note structures and have written exactly nothing about your day. The architecture is elegant. There is still no journal.',
+  },
+  {
+    emphasis: 'Colour-coding your emotions isn\'t the same as processing them.',
+    detail:
+      'A red dot for anger, a blue dot for sadness, a green dot for calm. The system is beautiful. It also tells you nothing about why you felt that way or what to do about it. Categorising is not understanding.',
+  },
+  {
+    emphasis: 'You sense patterns in your life but can\'t quite name them.',
+    detail:
+      'The same feelings keep surfacing. The same obstacles reappear. You know something is there — a recurring thread — but without a way to step back across weeks and months, you can\'t see it clearly.',
+  },
+];
+
 const Problem: React.FC = () => {
-  const painPoints = [
-    {
-      emphasis: 'You\'ve tried five apps. None of them talk to each other.',
-      detail: 'A mood tracker here, a gratitude journal there, a habit app on another screen. Your life is scattered across tools that each capture a fragment but never show you the whole picture.',
-    },
-    {
-      emphasis: 'You spend more time maintaining your system than using it.',
-      detail: 'Templates, plugins, workflows, vault organisation. You set up elaborate structures, colour-coded and categorised — then spend more time tending the system than actually reflecting. Removing decisions is underrated.',
-    },
-    {
-      emphasis: 'You sense patterns in your life but can\'t quite name them.',
-      detail: 'The same feelings keep surfacing. The same obstacles reappear. You know something is there — a recurring thread — but without a way to step back across weeks and months, you can\'t see it clearly.',
-    },
-    {
-      emphasis: 'Every other app measures time spent — not value delivered.',
-      detail: 'They\'re designed to keep you scrolling, not to help you grow. Their metric is your attention. Yours should be your progress.',
-    },
-    {
-      emphasis: 'Your best insights vanish before you can act on them.',
-      detail: 'A breakthrough at 2 AM, a moment of clarity during a walk — gone by the time you could write it down. No capture, no pattern, no follow-through.',
-    },
-  ];
-
-  // Single fade-in animation (Quiet Confidence constraint)
-  const fadeIn = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    transition: { duration: 0.5, ease: 'easeOut' as const },
-  };
-
   return (
-    <section className="relative py-24 sm:py-32 bg-ink font-body">
-      <div className="max-w-3xl mx-auto px-6">
-        {/* Section Header */}
-        <motion.div
-          {...fadeIn}
-          viewport={{ once: true, margin: '-100px' }}
-          className="text-center mb-16"
-        >
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
+    <section id="problem" className="relative bg-ink py-20 font-body sm:py-28">
+      <div className="container mx-auto max-w-[1120px] px-7">
+        <motion.div {...fadeUp} className="mx-auto mb-16 max-w-[760px] text-center sm:mb-20">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-stone before:inline-block before:h-px before:w-6 before:bg-stone">
+            The reality
+          </span>
+          <h2
+            className="mt-5 font-display font-bold leading-[1.05] tracking-tight text-cream"
+            style={{ fontSize: 'clamp(2rem, 3.6vw, 3.25rem)' }}
+          >
             You don't need another app.
-            <br />
-            You need one that sees the whole picture.
           </h2>
-          <p className="font-display text-2xl sm:text-3xl text-stone">
-            Journaling tools fragment your life into categories. You need one place for everything — and an AI that connects the dots.
+          <p
+            className="mt-3.5 font-display italic text-stone"
+            style={{
+              fontSize: 'clamp(1.5rem, 2.2vw, 2rem)',
+              fontWeight: 400,
+              lineHeight: 1.2,
+            }}
+          >
+            You need one that sees the whole picture.
           </p>
         </motion.div>
 
-        {/* Pain Points - Simple left border accent */}
-        <div className="space-y-10">
+        <div className="mx-auto flex max-w-[760px] flex-col gap-9">
           {painPoints.map((point, index) => (
             <motion.div
               key={index}
-              {...fadeIn}
-              transition={{ ...fadeIn.transition, delay: index * 0.1 }}
-              viewport={{ once: true, margin: '-50px' }}
-              className="relative pl-6 border-l-2 border-ember/40"
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: index * 0.08 }}
+              className="relative border-l-2 border-ember/40 py-1 pl-7"
             >
-              <p className="text-xl sm:text-2xl text-cream font-medium mb-2 font-body">
+              <p
+                className="mb-2 font-body font-semibold leading-snug text-cream"
+                style={{ fontSize: 'clamp(1.125rem, 1.5vw, 1.375rem)' }}
+              >
                 {point.emphasis}
               </p>
-              <p className="text-stone text-lg font-body">{point.detail}</p>
+              <p className="m-0 text-base leading-relaxed text-stone">{point.detail}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Transition statement */}
         <motion.p
-          {...fadeIn}
-          transition={{ ...fadeIn.transition, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center text-stone/70 text-lg mt-20 italic font-body"
+          {...fadeUp}
+          transition={{ ...fadeUp.transition, delay: 0.25 }}
+          className="mt-20 text-center font-display italic text-stone"
+          style={{ fontSize: '1.1875rem' }}
         >
           What if one journal could hold all of it — and show you what you can't see on your own?
         </motion.p>
