@@ -21,7 +21,7 @@
  */
 
 import React from 'react';
-import { Mic, Notebook, Sparkles, Moon, ShieldCheck, Infinity as InfinityIcon } from 'lucide-react';
+import { Mic, Notebook, Sparkles, Moon } from 'lucide-react';
 import EmailForm from './EmailForm';
 import ZenithPhoneMock from './ZenithPhoneMock';
 
@@ -56,14 +56,15 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, label, ariaHidden }) =>
 
 // Feature cards rendered in the hero. Lucide icons for consistent stroke + frame
 // proportions. Each card names one capability the phone mock demonstrates.
+// Trimmed to 4 cards (May 2026, CEO direction): privacy/no-subscription messaging
+// lives in the Differentiator section, so the hero column stays focused on the
+// four product pillars the phone mock actually shows.
 const ICON_CLASS = 'h-[18px] w-[18px] stroke-[2]';
 const FEATURE_CARDS: Array<{ label: string; icon: React.ReactNode }> = [
   { label: 'Voice or type — 4× faster than tapping', icon: <Mic className={ICON_CLASS} /> },
   { label: 'One place for reflection, mood, goals, dreams', icon: <Notebook className={ICON_CLASS} /> },
-  { label: 'AI surfaces patterns you can\'t see', icon: <Sparkles className={ICON_CLASS} /> },
+  { label: 'Zenith surfaces patterns you can\'t see', icon: <Sparkles className={ICON_CLASS} /> },
   { label: 'Tonight\'s thoughts become tomorrow\'s actions', icon: <Moon className={ICON_CLASS} /> },
-  { label: 'On-device — your words never leave your phone', icon: <ShieldCheck className={ICON_CLASS} /> },
-  { label: 'Unlimited AI insights, no subscription', icon: <InfinityIcon className={ICON_CLASS} /> },
 ];
 
 const TRUST_BADGES = ['Pattern Recognition', 'Everything Journal', 'Privacy-First'];
@@ -149,8 +150,10 @@ const Hero: React.FC = () => {
               <ZenithPhoneMock />
             </div>
 
-            {/* Desktop (md+) only: static 118px-wide vertical column beside the phone. */}
-            <div className="hidden md:grid md:h-[680px] md:w-auto md:auto-rows-auto md:grid-cols-[118px] md:grid-rows-[repeat(6,minmax(0,1fr))] md:gap-1.5 md:self-center md:flex-none">
+            {/* Desktop (md+) only: static 118px-wide vertical column beside the phone.
+                4 rows × ~112px + 3 × 6px gap ≈ 466px. md:self-center keeps the
+                column vertically balanced against the 720px phone hardware. */}
+            <div className="hidden md:grid md:w-auto md:grid-cols-[118px] md:auto-rows-[112px] md:gap-1.5 md:self-center md:flex-none">
               {FEATURE_CARDS.map((c, i) => (
                 <FeatureCard key={i} icon={c.icon} label={c.label} />
               ))}
