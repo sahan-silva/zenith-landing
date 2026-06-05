@@ -44,6 +44,18 @@
       "description": "Zenith Journal is your everything journal — the modern zibaldone powered by invisible AI. Reflection, mood tracking, goals, dreams, and daily logs all in one place. Privacy-first, local AI that surfaces emotional patterns and breakthroughs you'd never spot on your own."
     }
     </script>
+
+    <!-- Aramuna marketing pixel — tracks pageviews, scroll depth, CTA clicks.
+         Reports to mission-control. SRI hash must be updated when
+         _marketing-pixel.js changes:
+         cd mission-control && cat public/_marketing-pixel.js | openssl dgst -sha384 -binary | openssl base64 -A -->
+    <script
+      src="https://mission-control.aramuna.com/_marketing-pixel.js"
+      integrity="sha384-Y8dU0H1S+pHgkJMlTy9ukIde/2V5fb5C5Md1Dx5/TXJyOkfGOHZgqdiX68vtBrPS"
+      crossorigin="anonymous"
+      data-project="zenith"
+      defer
+    ></script>
   </head>
   <body>
     <div id="root"></div>
