@@ -25,6 +25,12 @@ const ZenithFooter: React.FC = () => {
         <div className="text-stone/70">© {year} Aramuna. All rights reserved.</div>
         <div className="flex gap-6">
           <a
+            href="/privacy"
+            className="text-stone transition-colors duration-300 ease-out hover:text-cream"
+          >
+            Privacy
+          </a>
+          <a
             href="https://aramuna.com"
             className="text-stone transition-colors duration-300 ease-out hover:text-cream"
           >
