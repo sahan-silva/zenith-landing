@@ -29,8 +29,11 @@ export default {
         "dawn": "#d4a574",           // Dawn - Highlight hover states
       },
       boxShadow: {
-        // Quiet Confidence - subtle ember glow for CTAs
-        "ember-glow": "0 0 20px rgba(201, 122, 74, 0.15)",
+        // Quiet Confidence - ember glow for CTAs (button hover) and scroll-rail
+        // active indicator. Stronger alpha (0.35) lets the active rail bar read
+        // as a glow against the dark ink background. Burlit uses an equivalent
+        // lime-glow at the same brightness on its scroll rail (TradieMateScrollRail).
+        "ember-glow": "0 0 20px rgba(201, 122, 74, 0.35)",
       },
     },
   },

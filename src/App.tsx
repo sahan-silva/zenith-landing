@@ -3,8 +3,9 @@
  *
  * Root application component for Zenith Journal landing page.
  * Routes:
- *   /               → ZenithLanding (main waitlist page)
- *   /compare/daylio → DaylioComparison (competitor comparison for Reddit/SEO traffic)
+ *   /               -> ZenithLanding (main waitlist page)
+ *   /compare/daylio -> DaylioComparison (competitor comparison for Reddit/SEO traffic)
+ *   /privacy        -> PrivacyPolicy (legal/privacy policy)
  *
  * New routes should be added here — BrowserRouter is provided by main.tsx.
  *
@@ -15,12 +16,14 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ZenithLanding from './components/ZenithLanding';
 import DaylioComparison from './components/DaylioComparison';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 const App: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<ZenithLanding />} />
       <Route path="/compare/daylio" element={<DaylioComparison />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
     </Routes>
   );
 };

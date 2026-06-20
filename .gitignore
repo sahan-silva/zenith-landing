@@ -39,3 +39,6 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# Local agent worktrees
+.claude/

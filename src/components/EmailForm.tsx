@@ -2,7 +2,13 @@
  * src/components/EmailForm.tsx
  *
  * Reusable email capture form for Zenith Journal waitlist.
- * Quiet Confidence redesign: Ember accent button, clean input styling.
+ *
+ * Pill-shaped recipe ported from Burlit's TradieMateEmailForm (aramuna-landing-page/
+ * components/trademate/TradieMateEmailForm.tsx) for product-family visual consistency.
+ * Both input and button are fully rounded (rounded-full); they stack on mobile and
+ * sit side-by-side on sm+. Burlit's accent (dusty lavender) becomes Zenith's ember;
+ * accent-hover becomes dawn; accent-glow becomes ember-glow. Supabase plumbing
+ * (subscribeToWaitlist) untouched.
  *
  * Related: utils/waitlist.ts, Hero.tsx, FinalCTA.tsx
  */
@@ -52,10 +58,11 @@ const EmailForm: React.FC<EmailFormProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' as const }}
-        className={`flex items-center gap-3 p-4 border border-ember/30 rounded-md ${className}`}
+        className={`flex items-center gap-3 rounded-full border border-ember/35 bg-ember/[0.06] px-5 py-3.5 ${className}`}
+        role="status"
       >
-        <CheckCircle className="w-5 h-5 text-ember flex-shrink-0" />
-        <p className="text-cream font-body">
+        <CheckCircle className="h-4 w-4 flex-shrink-0 text-ember" />
+        <p className="m-0 text-sm text-cream font-body">
           You're in! Check your inbox for a welcome message.
         </p>
       </motion.div>
@@ -64,44 +71,33 @@ const EmailForm: React.FC<EmailFormProps> = ({
 
   return (
     <form onSubmit={handleSubmit} className={`w-full ${className}`}>
-      <div className="flex flex-col sm:flex-row gap-3">
-        <div className="flex-1 relative">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-              if (formState === 'error') setFormState('idle');
-            }}
-            placeholder="Enter your email"
-            required
-            disabled={formState === 'loading'}
-            aria-label="Email address"
-            aria-describedby={formState === 'error' ? 'email-error' : undefined}
-            className={`w-full px-4 py-3 rounded-md bg-ink border font-body
-              ${formState === 'error' ? 'border-red-500/50' : 'border-stone/30'}
-              text-cream placeholder-stone/50
-              focus:outline-none focus:border-ember/50 focus:ring-1 focus:ring-ember/20
-              transition-all duration-500 ease-out
-              disabled:opacity-50 disabled:cursor-not-allowed`}
-          />
-        </div>
+      <div className="flex w-full flex-col gap-2.5 sm:flex-row sm:gap-2">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            if (formState === 'error') setFormState('idle');
+          }}
+          placeholder="Enter your email"
+          required
+          disabled={formState === 'loading'}
+          aria-label="Email address"
+          aria-describedby={formState === 'error' ? 'email-error' : undefined}
+          className={`min-w-0 flex-1 rounded-full bg-black/40 px-5 py-3 font-body text-[15px] text-cream placeholder:text-stone/70 transition-all duration-300 ease-out focus:border-ember focus:outline-none focus:ring-2 focus:ring-ember/20 disabled:cursor-not-allowed disabled:opacity-50
+            ${formState === 'error' ? 'border border-red-500/50' : 'border border-stone/40'}`}
+        />
         <motion.button
           type="submit"
           disabled={formState === 'loading' || !email}
           whileHover={{ scale: formState === 'loading' ? 1 : 1.01 }}
-          whileTap={{ scale: formState === 'loading' ? 1 : 0.99 }}
-          className={`px-6 py-3 rounded-md font-medium font-body
-            bg-ember text-ink
-            transition-all duration-500 ease-out
-            hover:bg-dawn hover:shadow-ember-glow
-            disabled:opacity-50 disabled:cursor-not-allowed
-            flex items-center justify-center gap-2 min-w-[180px]`}
+          whileTap={{ scale: formState === 'loading' ? 1 : 0.98 }}
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-ember px-6 py-3 font-body text-[15px] font-semibold text-ink transition-all duration-300 ease-out hover:bg-dawn hover:shadow-ember-glow disabled:cursor-not-allowed disabled:opacity-50"
         >
           {formState === 'loading' ? (
             <>
-              <Loader2 className="w-4 h-4 animate-spin" />
-              <span>Joining...</span>
+              <Loader2 className="h-4 w-4 animate-spin" />
+              <span>Joining…</span>
             </>
           ) : (
             buttonText
@@ -114,11 +110,11 @@ const EmailForm: React.FC<EmailFormProps> = ({
           id="email-error"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, ease: 'easeOut' as const }}
-          className="flex items-center gap-2 mt-3 text-red-400 text-sm font-body"
+          transition={{ duration: 0.4, ease: 'easeOut' as const }}
+          className="mt-3 flex items-center gap-2 text-sm text-red-400 font-body"
           role="alert"
         >
-          <AlertCircle className="w-4 h-4 flex-shrink-0" />
+          <AlertCircle className="h-4 w-4 flex-shrink-0" />
           <span>{errorMessage}</span>
         </motion.div>
       )}

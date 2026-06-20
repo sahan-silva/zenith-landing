@@ -1,79 +1,96 @@
 /**
  * src/components/WhoItsFor.tsx
  *
- * Who It's For section for Zenith Journal landing page.
- * Quiet Confidence redesign: Clean checklist, ember accents, no hover effects.
+ * "Who it's for" section for Zenith Journal landing page.
  *
- * Pattern Recognition variant (Apr 2026): Checklist reframed for system-fatigued and
- * ADHD-adjacent users who want zero-decision journaling and invisible AI. Reddit intel
- * (2026-04-07): "everything journal" gap (r/Journaling, 157 engagement), "removing
- * decisions is so underrated" (r/ADHD, 76 engagement), app fragmentation pain.
- * Notion task: https://notion.so/334fb7321349811a97c5f89be5437bd1
+ * Ports the Burlit who-it's-for grammar (aramuna-landing-page/components/trademate/
+ * TradieMateWhoItsFor.tsx): "Who it's for" eyebrow → display H2 "Is this you?" with
+ * ember em-accent → chevron-pill checklist (small ember-tinted square with `>` glyph) →
+ * stone closing line.
  *
- * Related: ZenithLanding.tsx, AntiEngagementManifesto.tsx
+ * Chevron-pill marker is deliberately different from the checkmark used in
+ * Differentiator — chevron signals "this points TO you," checkmark signals "we deliver
+ * this." Same product, two distinct ideas, two distinct affordances.
+ *
+ * Checklist preserved verbatim from previous WhoItsFor.tsx (Reddit intel, Apr 2026):
+ *   - "Removing decisions is so underrated" (r/ADHD, 76 engagement)
+ *   - System-fatigue (Notion/Daylio/Day One)
+ *   - Pattern-naming difficulty (r/Journaling)
+ *   - Anti-engagement audience (r/aiagents)
+ *
+ * Related: ZenithLanding.tsx, Differentiator.tsx, Benefits.tsx
  */
 
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const fadeUp = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-80px' },
+  transition: { duration: 0.5, ease: 'easeOut' as const },
+};
+
+const checklist: string[] = [
+  'You\'ve tried Notion, Daylio, Day One — and none of them stuck',
+  'You want to just write — no templates, no plugins, no vault organisation',
+  'You sense patterns in your life but struggle to name them',
+  'You\'re done with apps that count your time spent and call it progress',
+  'You want a tool that removes decisions, not adds them',
+  'You want clarity about who you are and where you\'re going',
+];
+
 const WhoItsFor: React.FC = () => {
-  const checklistItems = [
-    'You\'ve tried Notion, Daylio, Day One — and none of them stuck',
-    'You want to just write — no templates, no plugins, no vault organisation',
-    'You sense patterns in your life but struggle to name them',
-    "You're done with apps that count your time spent and call it progress",
-    'You want a tool that removes decisions, not adds them',
-    'You want clarity about who you are and where you\'re going',
-  ];
-
-  // Single fade-in animation (Quiet Confidence constraint)
-  const fadeIn = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    transition: { duration: 0.5, ease: 'easeOut' as const },
-  };
-
   return (
-    <section className="relative py-24 sm:py-32 bg-ink font-body">
-      <div className="max-w-2xl mx-auto px-6">
-        {/* Section Header */}
-        <motion.div
-          {...fadeIn}
-          viewport={{ once: true, margin: '-100px' }}
-          className="text-center mb-12"
-        >
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-cream mb-4 tracking-tight">
-            Is this <span className="text-ember">you</span>?
+    <section id="who" className="relative bg-ink py-20 font-body sm:py-28">
+      <div className="container mx-auto max-w-[1120px] px-7">
+        <motion.div {...fadeUp} className="mx-auto mb-14 max-w-[600px] text-center">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-stone before:inline-block before:h-px before:w-6 before:bg-stone">
+            Who it's for
+          </span>
+          <h2
+            className="mt-5 font-display font-bold leading-[1.05] tracking-tight text-cream"
+            style={{ fontSize: 'clamp(2rem, 3.6vw, 3.25rem)' }}
+          >
+            Is this <em className="not-italic text-ember">you</em>?
           </h2>
-          <p className="text-stone text-lg font-body">
+          <p className="mt-3.5 text-[1.0625rem] leading-relaxed text-stone sm:text-[1.125rem]">
             Zenith is for people who are done maintaining systems — and ready for one that maintains itself.
           </p>
         </motion.div>
 
-        {/* Checklist - Simple, typography-driven */}
-        <div className="space-y-6">
-          {checklistItems.map((item, index) => (
+        <div className="mx-auto flex max-w-[680px] flex-col gap-5">
+          {checklist.map((item, i) => (
             <motion.div
-              key={index}
-              {...fadeIn}
-              transition={{ ...fadeIn.transition, delay: index * 0.1 }}
-              viewport={{ once: true, margin: '-50px' }}
+              key={i}
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: i * 0.06 }}
               className="flex items-start gap-4"
             >
-              <span className="text-ember text-xl mt-0.5 font-body">+</span>
-              <p className="text-cream text-lg leading-relaxed font-body">
-                {item}
-              </p>
+              {/* Chevron pill — "this points to you". Differentiated from
+                  Differentiator's checkmark (which signals "we deliver this"). */}
+              <span className="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-md border border-ember/35 bg-ember/10 text-ember">
+                <svg
+                  className="h-3.5 w-3.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </span>
+              <p className="m-0 text-[17px] leading-[1.55] text-cream">{item}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Closing statement */}
         <motion.p
-          {...fadeIn}
-          transition={{ ...fadeIn.transition, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center text-stone/70 text-lg mt-16 font-body"
+          {...fadeUp}
+          transition={{ ...fadeUp.transition, delay: 0.3 }}
+          className="mt-14 text-center text-base text-stone"
         >
           If any of these land, Zenith was built for you — one place for everything, zero decisions required.
         </motion.p>

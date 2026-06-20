@@ -1,91 +1,111 @@
 /**
  * src/components/FinalCTA.tsx
  *
- * Final Call-to-Action section for Zenith Journal landing page.
- * Quiet Confidence redesign: Simple incentive list, no animated orbs.
+ * Final call-to-action section for Zenith Journal landing page.
  *
- * Midnight Clarity alignment (Apr 2026): CTA headline and incentive list now close
- * the narrative arc opened in Hero — evening clarity captured, morning actions delivered.
- * Incentive list surfaces the overnight AI processing as the tangible mechanism.
- * Source: Reddit r/productivity midnight clarity thread (824 upvotes).
+ * Ports the Burlit final-CTA grammar (aramuna-landing-page/components/trademate/
+ * TradieMateFinalCTA.tsx): bottom-radial ember glow → "Zenith Co-creators" eyebrow →
+ * display H2 with ember em-accent → flex row of incentives (each `+ label`) → EmailForm
+ * → stone trust note.
  *
- * Related: EmailForm.tsx, ZenithLanding.tsx, AntiEngagementManifesto.tsx, NoSubscription.tsx
+ * Headline keeps the Apr 2026 "Midnight Clarity" arc — Tonight's clarity, tomorrow's
+ * action (Reddit r/productivity midnight clarity thread, 824 upvotes). Incentive list
+ * trimmed from 6 → 4 for Burlit parity; the dropped items survive in commit history
+ * and can move into a future /zenith/why-join page.
+ *
+ * Related: ZenithLanding.tsx, EmailForm.tsx, ZenithWordmarkBar.tsx (the floating CTA
+ * that targets this section's #waitlist anchor).
  */
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import EmailForm from './EmailForm';
 
+const fadeUp = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-80px' },
+  transition: { duration: 0.5, ease: 'easeOut' as const },
+};
+
+const incentives = [
+  'Early access to the beta',
+  'Founding member pricing',
+  'Shape the features we ship',
+  'AI insights included — no subscription, ever',
+];
+
 const FinalCTA: React.FC = () => {
-  const incentives = [
-    'Early access to the beta',
-    'Shape the features we build — we only ship what earns its place',
-    'Founding member pricing',
-    'Be first to wake up to actions born from last night\'s clarity',
-    'Overnight AI that turns evening thoughts into morning momentum',
-    // Cost-freedom: AI on-device means no subscription, no usage billing — ever
-    'AI insights included — no subscription, ever',
-  ];
-
-  // Single fade-in animation (Quiet Confidence constraint)
-  const fadeIn = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    transition: { duration: 0.5, ease: 'easeOut' as const },
-  };
-
   return (
-    <section className="relative py-24 sm:py-32 bg-ink font-body overflow-hidden">
-      <div className="relative z-10 max-w-3xl mx-auto px-6">
-        {/* Section Header */}
-        <motion.div
-          {...fadeIn}
-          viewport={{ once: true, margin: '-100px' }}
-          className="text-center mb-12"
-        >
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
+    <section
+      id="waitlist"
+      className="relative overflow-hidden bg-ink py-20 font-body sm:py-28"
+    >
+      {/* Ember radial glow blooming from the bottom edge — the only warmth allowed
+          on a body section, mirroring Burlit's lime-glow CTA bloom. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 -bottom-[200px] h-[400px]"
+        style={{
+          background:
+            'radial-gradient(ellipse at 50% 100%, rgba(201,122,74,0.10) 0%, transparent 65%)',
+        }}
+      />
+
+      <div className="container relative z-10 mx-auto max-w-[1120px] px-7">
+        <div className="mx-auto max-w-[680px] text-center">
+          <motion.span
+            {...fadeUp}
+            className="inline-flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-stone before:inline-block before:h-px before:w-6 before:bg-stone"
+          >
+            Zenith Co-creators
+          </motion.span>
+
+          <motion.h2
+            {...fadeUp}
+            transition={{ ...fadeUp.transition, delay: 0.06 }}
+            className="mt-5 font-display font-bold leading-[1.05] tracking-tight text-cream"
+            style={{ fontSize: 'clamp(2rem, 3.6vw, 3.25rem)' }}
+          >
             Tonight's clarity.{' '}
-            <span className="text-ember">Tomorrow's action.</span>
-          </h2>
-          <p className="text-stone text-lg max-w-xl mx-auto font-body">
+            <em className="not-italic text-ember">Tomorrow's action.</em>
+          </motion.h2>
+
+          <motion.p
+            {...fadeUp}
+            transition={{ ...fadeUp.transition, delay: 0.12 }}
+            className="mx-auto mt-4 max-w-[520px] text-[1.0625rem] leading-relaxed text-stone sm:text-[1.125rem]"
+          >
             Join the waitlist. Zenith captures what you think at night and turns it into what you do in the morning.
-          </p>
-        </motion.div>
+          </motion.p>
 
-        {/* Incentives - Simple text list */}
-        <motion.div
-          {...fadeIn}
-          transition={{ ...fadeIn.transition, delay: 0.1 }}
-          viewport={{ once: true, margin: '-50px' }}
-          className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-12 text-stone"
-        >
-          {incentives.map((incentive) => (
-            <span key={incentive} className="flex items-center gap-2">
-              <span className="text-ember">+</span>
-              <span>{incentive}</span>
-            </span>
-          ))}
-        </motion.div>
+          <motion.div
+            {...fadeUp}
+            transition={{ ...fadeUp.transition, delay: 0.18 }}
+            className="mb-10 mt-10 flex flex-wrap justify-center gap-x-7 gap-y-3.5"
+          >
+            {incentives.map((incentive) => (
+              <span
+                key={incentive}
+                className="inline-flex items-center gap-2 text-[14.5px] text-stone"
+              >
+                <span className="font-bold text-ember">+</span>
+                {incentive}
+              </span>
+            ))}
+          </motion.div>
 
-        {/* Email Form */}
-        <motion.div
-          {...fadeIn}
-          transition={{ ...fadeIn.transition, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="max-w-md mx-auto"
-        >
-          <EmailForm buttonText="Join the Waitlist" />
-        </motion.div>
-
-        {/* Trust note */}
-        <motion.p
-          {...fadeIn}
-          transition={{ ...fadeIn.transition, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center text-stone/50 text-sm mt-8 font-body"
-        >
-          No spam. No engagement tricks. Just one update when Zenith is ready for you.
-        </motion.p>
+          <motion.div
+            {...fadeUp}
+            transition={{ ...fadeUp.transition, delay: 0.24 }}
+            className="mx-auto w-full max-w-[320px] sm:max-w-[460px]"
+          >
+            <EmailForm buttonText="Join the Waitlist" />
+            <p className="mt-5 text-center text-[12.5px] text-stone/70 sm:text-left">
+              No spam. No engagement tricks. Just one update when Zenith is ready for you.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
