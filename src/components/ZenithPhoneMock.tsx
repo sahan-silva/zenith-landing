@@ -185,7 +185,7 @@ const ZenithPhoneMock: React.FC = () => {
           /* Layout — status bar / screenshot / tab zone */
           --zn-status-h: 44px;
           --zn-shot-h: 626px;        /* 340 × (2222/1206) — the cropped screenshot at 1× */
-          --zn-tab-zone-h: 62px;
+          --zn-tab-zone-h: 74px;
 
           width: 340px; height: 720px;
           background: #221a35;
@@ -359,10 +359,10 @@ const ZenithPhoneMock: React.FC = () => {
           position: absolute; left: 0; right: 0; bottom: 0; z-index: 10;
           height: var(--zn-tab-zone-h);
           background: linear-gradient(180deg,
-            rgba(34,26,53,0) 0px, #221a35 14px, #1b1429 100%);
+            rgba(34,26,53,0) 0px, rgba(34,26,53,0.9) 12px, #221a35 20px, #1b1429 100%);
         }
         .zn-tabbar {
-          position: absolute; left: 16px; right: 16px; top: 6px;
+          position: absolute; left: 16px; right: 16px; top: 18px;
           height: 46px; border-radius: 999px;
           display: flex; align-items: stretch; padding: 3px;
           background: rgba(30, 25, 46, 0.9);
