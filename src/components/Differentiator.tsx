@@ -10,11 +10,12 @@
  *
  * Consolidates content from three previous sections (AntiEngagementManifesto, Privacy,
  * NoSubscription) into the 4 strongest contrast pairs per the 2026-05-11 design spec.
- * The four pairs each pull from a different Reddit-intel positioning seam:
+ * The four pairs each pull from a different Reddit-intel positioning seam, updated
+ * Sep 2026 so every claim matches build 17 and the published privacy policy:
  *   1. Time as product vs value delivered     (AntiEngagementManifesto, principle 1)
- *   2. Dark patterns vs respect for autonomy   (AntiEngagementManifesto, principle 4)
- *   3. Cloud breach vs zero attack surface     (Privacy, r/docker breach thread)
- *   4. Subscription stacking vs included AI    (NoSubscription, r/artificial)
+ *   2. Dark patterns vs an honest streak       (the Journey tab has a streak — say so)
+ *   3. Data resold/trained-on vs never sold, delete any time (privacy policy)
+ *   4. Paywalled basics vs free journaling + one Premium plan after a 14-day trial
  *
  * Detail beyond these 4 pairs survives in commit history and can be relocated to a
  * future /zenith/why-private sub-page once the landing has a router.
@@ -35,15 +36,15 @@ const fadeUp = {
 const othersPoints: string[] = [
   'Designed to keep you scrolling — your time IS the product',
   'Streaks and notifications engineered to manufacture anxiety',
-  'One cloud breach away from your deepest thoughts going public',
-  'Monthly AI subscriptions that stack — more insight, higher bill',
+  'Your entries quietly resold, or used to train someone else\'s model',
+  'Paywalls on the basics — write a line, hit a wall',
 ];
 
 const usPoints: Array<{ text?: string; bold: string }> = [
   { text: '', bold: 'Measures value delivered, not time spent' },
-  { text: '', bold: 'Zero dark patterns. No streaks. Ever.' },
-  { text: 'Runs entirely on your device —', bold: 'zero attack surface' },
-  { text: '', bold: 'AI included forever. No subscription. No usage caps.' },
+  { text: 'Zero dark patterns.', bold: 'Your Journey streak is a record of showing up, not a leash.' },
+  { text: 'Never sold, never used to train AI models.', bold: 'Delete everything, any time.' },
+  { text: 'Journaling is free.', bold: 'One Premium plan for the AI, after a 14-day free trial.' },
 ];
 
 const Differentiator: React.FC = () => {

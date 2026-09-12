@@ -37,32 +37,32 @@ const comparisonRows: ComparisonRow[] = [
   {
     feature: 'Entry method',
     daylio: 'Tap emoji + manual tags',
-    zenith: 'Just talk (voice-first)',
+    zenith: 'Voice or type — just write',
   },
   {
     feature: 'Pattern detection',
     daylio: 'Manual: export CSV, analyze yourself',
-    zenith: 'AI automatic: patterns surface weekly',
+    zenith: 'Insights tab: AI surfaces patterns weekly',
   },
   {
-    feature: 'Activity tracking',
+    feature: 'Follow-through',
     daylio: 'Manual category selection',
-    zenith: 'AI extracts activities from natural speech',
+    zenith: 'AI pulls tasks, goals and bucket-list items into Actions',
   },
   {
     feature: 'Emotional depth',
     daylio: '5 emoji scale',
-    zenith: 'Full-spectrum voice analysis',
+    zenith: 'AI reads the whole entry, not an emoji',
   },
   {
     feature: 'Time investment',
     daylio: '5–10 min/entry with tagging',
-    zenith: '2 min voice entry, AI does the rest',
+    zenith: '2 min entry, AI does the rest',
   },
   {
-    feature: 'Privacy',
+    feature: 'Your data',
     daylio: 'Cloud-synced',
-    zenith: '100% on-device',
+    zenith: 'Never sold or trained on — delete everything any time',
   },
 ];
 
@@ -366,7 +366,7 @@ const DaylioComparison: React.FC = () => {
             viewport={{ once: true }}
             className="text-stone/50 text-sm font-body"
           >
-            100% on-device. No subscription. No cloud sync.
+            Journaling is free. Premium AI after a 14-day free trial.
           </motion.p>
 
         </div>

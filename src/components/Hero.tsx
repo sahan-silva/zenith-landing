@@ -21,7 +21,7 @@
  */
 
 import React from 'react';
-import { Mic, Notebook, Sparkles, Moon } from 'lucide-react';
+import { Mic, ListChecks, Sparkles, Mountain } from 'lucide-react';
 import EmailForm from './EmailForm';
 import ZenithPhoneMock from './ZenithPhoneMock';
 
@@ -55,16 +55,15 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, label, ariaHidden }) =>
 );
 
 // Feature cards rendered in the hero. Lucide icons for consistent stroke + frame
-// proportions. Each card names one capability the phone mock demonstrates.
-// Trimmed to 4 cards (May 2026, CEO direction): privacy/no-subscription messaging
-// lives in the Differentiator section, so the hero column stays focused on the
-// four product pillars the phone mock actually shows.
+// proportions. One card per tab the phone mock shows (build 17): Journal capture,
+// Actions, Insights, Journey. Privacy/pricing messaging lives in the
+// Differentiator section so the hero column stays focused on the product.
 const ICON_CLASS = 'h-[18px] w-[18px] stroke-[2]';
 const FEATURE_CARDS: Array<{ label: string; icon: React.ReactNode }> = [
-  { label: 'Voice or type — 4× faster than tapping', icon: <Mic className={ICON_CLASS} /> },
-  { label: 'One place for reflection, mood, goals, dreams', icon: <Notebook className={ICON_CLASS} /> },
-  { label: 'Zenith surfaces patterns you can\'t see', icon: <Sparkles className={ICON_CLASS} /> },
-  { label: 'Tonight\'s thoughts become tomorrow\'s actions', icon: <Moon className={ICON_CLASS} /> },
+  { label: 'Voice or type — capture a thought in seconds', icon: <Mic className={ICON_CLASS} /> },
+  { label: 'AI turns entries into tasks, goals and a bucket list', icon: <ListChecks className={ICON_CLASS} /> },
+  { label: 'Insights that surface the patterns you can\'t see', icon: <Sparkles className={ICON_CLASS} /> },
+  { label: 'Journey: your streak, milestones and weekly rhythm', icon: <Mountain className={ICON_CLASS} /> },
 ];
 
 const TRUST_BADGES = ['Pattern Recognition', 'Everything Journal', 'Privacy-First'];
