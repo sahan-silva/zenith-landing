@@ -32,7 +32,7 @@ const incentives = [
   'Early access to the beta',
   'Founding member pricing',
   'Shape the features we ship',
-  'AI insights included — no subscription, ever',
+  'Journaling free forever — Premium AI after a 14-day free trial',
 ];
 
 const FinalCTA: React.FC = () => {

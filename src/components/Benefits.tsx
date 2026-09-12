@@ -7,19 +7,20 @@
  * TradieMateBenefits.tsx): "How it works" eyebrow → display H2 with ember em-accent →
  * 3-column grid where each card is icon tile + 01/02/03 number + display title + body.
  *
- * Three pillars preserved verbatim from the previous Benefits content (Reddit intel,
- * Apr 2026 — Notion task: notion.so/334fb7321349811a97c5f89be5437bd1):
- *   01 — Just Write (Mic): zero-decision entry, voice or text, 4× faster
- *   02 — Your Everything Journal (Notebook): one place for reflection/mood/goals/dreams,
- *        the modern zibaldone — wording aligned with Hero subhead and SEO meta
- *   03 — Patterns You Can't See (Sparkles): AI works invisibly across weeks/months
+ * Three pillars, each mapped to what the build-17 app actually does (Sep 2026):
+ *   01 — Just Write (Mic): zero-decision entry, voice or type — journaling is free
+ *   02 — Thoughts Become Actions (ListChecks): the Actions tab — AI pulls tasks,
+ *        goals and bucket-list items out of plain entries
+ *   03 — Patterns You Can't See (Sparkles): the Insights tab + Journey streak/milestones
+ * Earlier "everything journal / zibaldone" framing (Reddit intel, Apr 2026) survives in
+ * the Hero subhead; it was retired here so the grid describes real tabs.
  *
  * Related: ZenithLanding.tsx, Hero.tsx, Problem.tsx
  */
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mic, Notebook, Sparkles } from 'lucide-react';
+import { Mic, ListChecks, Sparkles } from 'lucide-react';
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -38,19 +39,19 @@ const benefits: Array<{
   {
     title: 'Just Write',
     description:
-      'Voice or text — no templates, no folders, no decisions. Zenith adapts to however you think. Four times faster than typing, zero setup required. The AI removes every barrier between you and reflection.',
+      'Speak it or type it — no templates, no folders, no decisions. Open the Journal tab, add a mood or a tag if you feel like it, and write. Journaling itself is free; the AI only steps in afterwards, and never gets between you and the page.',
     icon: <Mic className={ICON_CLASS} />,
   },
   {
-    title: 'Your Everything Journal',
+    title: 'Thoughts Become Actions',
     description:
-      'Reflection, mood tracking, goals, dreams, daily logs — one place for all of it. Zenith reads between the lines and organises your life without asking you to categorise anything. The modern zibaldone — one notebook for everything, powered by AI that reads between the lines.',
-    icon: <Notebook className={ICON_CLASS} />,
+      'Write "I need to call Mum this weekend" and it shows up in the Actions tab as a task — due this weekend. Goals and bucket-list items are pulled out the same way, straight from your own words. Nothing to tag, nothing to file, nothing to remember.',
+    icon: <ListChecks className={ICON_CLASS} />,
   },
   {
     title: "Patterns You Can't See",
     description:
-      "Zenith's AI works invisibly across weeks and months of your entries. It surfaces emotional patterns, recurring obstacles, and hidden correlations — the threads running through your life that no single journal session could reveal. You never interact with the AI. It just shows you what's there.",
+      "The Insights tab reads across weeks of entries and surfaces what a single session never could — the moods that follow a walk, the weeks that ran late, the people who keep turning up. The Journey tab keeps your streak and milestones so the practice has a rhythm, not a scoreboard.",
     icon: <Sparkles className={ICON_CLASS} />,
   },
 ];
@@ -75,7 +76,7 @@ const Benefits: React.FC = () => {
             <em className="not-italic text-ember">what you can't.</em>
           </h2>
           <p className="mt-3.5 text-[1.0625rem] leading-relaxed text-stone sm:text-[1.125rem]">
-            One place for everything. Zero decisions. An AI that works invisibly — surfacing the patterns, connections, and breakthroughs hidden in your own words.
+            Four tabs, zero decisions. Journal what happened, let Zenith turn it into Actions, read the Insights, and watch your Journey take shape.
           </p>
         </motion.div>
 
